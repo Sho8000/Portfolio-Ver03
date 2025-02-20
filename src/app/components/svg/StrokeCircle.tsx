@@ -1,6 +1,7 @@
 interface CircleProps {
   radius:number;
   type:"fill"|"stroke";
+  color:string;
 }
 
 interface CircleType {
@@ -14,7 +15,7 @@ const CircleSVG = ({circleType}:CircleType) => {
   const radius = circleType.radius;
   let fill = "none"
   if(circleType.type==="fill"){
-    fill = "white"
+    fill = circleType.color
   }
 
   return (
@@ -30,7 +31,7 @@ const CircleSVG = ({circleType}:CircleType) => {
           strokeWidth={"1px"}
           r={radius}
           fill={fill}
-          stroke="white"
+          stroke={circleType.color}
           transform={`rotate(-90 ${circleSize/2} ${circleSize/2})`}
           strokeLinecap="round"
           strokeLinejoin="round"

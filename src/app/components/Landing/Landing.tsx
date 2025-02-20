@@ -1,6 +1,7 @@
-import CircleProgressBar from "./CircleProgressBar";
+import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
 import Style from "./Landing.module.css"
-import CircleSVG from "./svg/StrokeCircle";
+import CircleSVG from "../svg/StrokeCircle";
+import { BtnWithCircle } from "../Button/Button";
 
 export default function LandingPage() {
 
@@ -18,14 +19,8 @@ export default function LandingPage() {
             <p className="text-white text-xl text-center">Turn on your sound to enjoy!</p>
           </div>
           <div className="flex justify-center gap-4">
-            <button className={`flex items-center gap-2 ${Style.buttonBorder}`}>
-              <CircleSVG circleType={{radius:8 ,type:"fill"}}/>
-              <p className="text-white">Sound ON</p>
-            </button>
-            <button className={`flex items-center gap-2 border-white ${Style.buttonBorder}`}>
-              <CircleSVG circleType={{radius:8 ,type:"stroke"}}/>
-              <p className="text-white">Sound OFF</p>
-            </button>
+            <BtnWithCircle btnWithCircleType={{text:"Preparing" ,radius:8 ,type:"stroke", color:"white"}} />
+            <BtnWithCircle btnWithCircleType={{text:"Sound OFF" ,radius:8 ,type:"stroke", color:"white"}} />
           </div>
         </div>
       </div>
