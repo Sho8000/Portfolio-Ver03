@@ -7,12 +7,12 @@ import Style from "./Sidebar.module.css"
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useHbgBtnContext } from "@/app/context/HbgContext";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function Sidebar() {
-  const {hbgState, closeSide} = useHbgBtnContext()
+  const {hbgState, closeSide} = useHbgBtnContext();
   const sidebarRef = useRef(null)
   const sidebarAnimation = useRef(gsap.timeline());
 
@@ -39,7 +39,7 @@ export default function Sidebar() {
       <div ref={sidebarRef} className={`fixed max-w-[100vw] w-[320px] h-[99vh] translate-x-[320px] right-0 z-10 overflow-scroll border-l-2 border-gray-400 ${Style.mainBG}`}>
         <Stardust/>
           <div className="flex flex-col mt-5">
-            <div className="text-right pr-4" onClick={closeBtnHandler}>
+            <div className="ml-auto pr-4 w-fit" onClick={closeBtnHandler}>
               <CloseBtn/>
             </div>
             <div className="flex flex-col justify-center w-fit gap-10 ml-5">

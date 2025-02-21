@@ -11,6 +11,7 @@ const HbgBtnContext = createContext<HbgState | undefined>(undefined);
 
 const HbgBtnContextProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
   const [hbgState,setHbgState] = useState(false)
+  const [isOpen,setIsOpen] = useState(false)
 
   const openSide = () => {
     setHbgState(true)

@@ -6,11 +6,7 @@ import { HbgBtnContextProvider } from "../context/HbgContext";
 export default function Home() {
   return (
     <>
-      <HbgBtnContextProvider>
-        <Header/>
-        <Sidebar/>
-        <HomeMain/>
-      </HbgBtnContextProvider>
+      <HomeMain/>
     </>
   );
 }

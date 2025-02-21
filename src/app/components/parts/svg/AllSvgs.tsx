@@ -54,7 +54,6 @@ export const HbgMenu = () => {
 
   const HbgClickHandler = () => {
     openSide();
-    console.log("clicked")
   }
 
   return (
