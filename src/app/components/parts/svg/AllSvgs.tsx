@@ -9,7 +9,7 @@ interface CircleType {
 }
 
 
-const CircleSVG = ({circleType}:CircleType) => {
+export const CircleSVG = ({circleType}:CircleType) => {
   //circle of 1px stroke
   const circleSize = (circleType.radius * 2) + 2; 
   const radius = circleType.radius;
@@ -41,4 +41,17 @@ const CircleSVG = ({circleType}:CircleType) => {
   );
 };
 
-export default CircleSVG;
+export const HbgMenu = () => {
+  return (
+    <button>
+      <svg width="60" height="47">
+        <rect x="10" y="10" rx="1" ry="1" width="40" height="2"
+        style={{fill:"white",stroke:"white",strokeWidth:5}} />
+        <rect x="10" y="22" rx="1" ry="1" width="40" height="2"
+        style={{fill:"white",stroke:"white",strokeWidth:5}} />
+        <rect x="10" y="34" rx="1" ry="1" width="40" height="2"
+        style={{fill:"white",stroke:"white",strokeWidth:5}} />
+      </svg>  
+    </button> 
+  )
+}

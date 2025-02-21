@@ -1,5 +1,5 @@
-import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
-import { BtnWithCircle } from "../Button/Button";
+import CircleProgressBar from "../../parts/CircleProgressBar/CircleProgressBar";
+import { BtnWithCircle } from "../../parts/Button/Button";
 
 export default function LandingPage() {
 

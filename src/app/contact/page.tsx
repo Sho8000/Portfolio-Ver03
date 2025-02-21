@@ -1,4 +1,4 @@
-import Footer from "../components/Footer/Footer";
+import Footer from "../components/pages/Footer/Footer";
 
 export default function Contact() {
   return (

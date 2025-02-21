@@ -1,10 +1,10 @@
 "use client"
 import Image from "next/image";
-import EmailIcon from "../../../../public/Email.png"
-import GithubIcon from "../../../../public/github.png"
-import InstagramIcon from "../../../../public/instagramLogo.png"
-import LinkedInIcon from "../../../../public/LinkedIn.png"
-import { Btn } from "../Button/Button";
+import EmailIcon from "@/../public/Email.png"
+import GithubIcon from "@/../public/github.png"
+import InstagramIcon from "@/../public/instagramLogo.png"
+import LinkedInIcon from "@/../public/LinkedIn.png"
+import { Btn } from "../../parts/Button/Button";
 import { useEffect, useState } from "react";
 
 interface FooterProps {

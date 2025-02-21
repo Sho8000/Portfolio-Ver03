@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Stardust from "./components/StardustBG/Stardust";
+import Stardust from "./components/parts/StardustBG/Stardust";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

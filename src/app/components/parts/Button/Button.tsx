@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from "next/navigation";
-import CircleSVG from "../svg/StrokeCircle";
 import Style from "./Button.module.css"
+import { CircleSVG } from "../svg/AllSvgs";
 
 interface BtnProps {
   text:string;
