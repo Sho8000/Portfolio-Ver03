@@ -46,11 +46,7 @@ export const CircleSVG = ({circleType}:CircleType) => {
 };
 
 export const HbgMenu = () => {
-  const {hbgState,openSide} = useHbgBtnContext();
-
-  useEffect(()=>{
-    console.log(hbgState)
-  },[hbgState,openSide])
+  const {openSide} = useHbgBtnContext();
 
   const HbgClickHandler = () => {
     openSide();

@@ -5,8 +5,8 @@ import Footer from "../Footer/Footer";
 
 export default function HomeMain() {
   return (
-    <section className="w-[100vw] min-h-[100vh] overflow-x-hidden">
-      <div className="w-[100vw] min-h-[600px] h-[100vh] relative">
+    <section className="w-[100vw] min-h-[80vh] overflow-x-hidden">
+      <div className="w-[100vw] min-h-[400px] h-[80vh] relative">
         <div>
           <h2 className="text-white text-3xl font-bold pt-4 pl-4">Sho Yoshimura</h2>
         </div>
@@ -25,7 +25,6 @@ export default function HomeMain() {
             style={{border:"4px solid white", borderRadius:"50%"}}
           />
         </div>
-        <Footer contact={true}/>
       </div>
     </section>
   );

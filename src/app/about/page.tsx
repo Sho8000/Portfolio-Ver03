@@ -18,6 +18,10 @@ export default function About() {
             WorkExperience
             
           </section>
+          <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+          </section>
+          <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+          </section>
         </main>
       </HbgBtnContextProvider>
       <Footer contact={true}/>

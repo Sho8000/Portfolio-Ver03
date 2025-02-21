@@ -24,7 +24,7 @@ export default function Footer({contact}:FooterProps) {
 
   return (
     <>
-      <div className="absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+      <div className="flex flex-col items-center justify-center m-5">
         <div className="min-w-max flex gap-2">
           <Image
             src={InstagramIcon}

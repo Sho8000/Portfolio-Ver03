@@ -44,7 +44,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div ref={sidebarRef} className={`fixed max-w-[100vw] w-[320px] h-[99vh] translate-x-[320px] right-0 z-10 overflow-scroll border-l-2 border-gray-400 ${Style.mainBG}`}>
+      <div ref={sidebarRef} className={`fixed max-w-[100vw] w-[320px] h-[99vh] translate-x-[320px] right-0 z-10 overflow-hidden border-l-2 border-gray-400 ${Style.mainBG}`}>
         <Stardust/>
           <div className="flex flex-col mt-5">
             <div className="ml-auto pr-4 w-fit" onClick={closeBtnHandler}>
