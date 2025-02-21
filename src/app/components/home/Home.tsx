@@ -25,9 +25,7 @@ export default function HomeMain() {
             style={{border:"4px solid white", borderRadius:"50%"}}
           />
         </div>
-        <div className="absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <Footer withContact={{contact:true}}/>
-        </div>
+        <Footer contact={true}/>
       </div>
     </section>
   );
