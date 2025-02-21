@@ -14,15 +14,23 @@ gsap.registerPlugin(useGSAP,ScrollTrigger);
 export default function Sidebar() {
   const {hbgState, closeSide} = useHbgBtnContext();
   const sidebarRef = useRef(null)
-  const sidebarAnimation = useRef(gsap.timeline());
+  const sidebarAnimation = useRef(gsap.timeline({paused:true}));
+
+  useEffect(() => {
+    sidebarAnimation.current
+      .to(sidebarRef.current, { x: 0, duration: 1, transformOrigin: "right" })
+      .reverse(); // Start in a reversed state (hidden)
+
+    return () => {
+      sidebarAnimation.current.kill();
+    };
+  }, []);
 
   useEffect(()=>{
     if(hbgState){
-      sidebarAnimation.current
-        .to(sidebarRef.current,{x:0 ,duration:1,transformOrigin:"right"})
+      sidebarAnimation.current.play()
     } else {
-      sidebarAnimation.current
-        .to(sidebarRef.current,{x:"100%" ,duration:1,transformOrigin:"right"})
+      sidebarAnimation.current.reverse()
     }
 
     return () => {
