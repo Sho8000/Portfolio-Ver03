@@ -7,6 +7,7 @@ export default function HomeMain() {
   return (
     <section className="w-[100vw] min-h-[100vh] overflow-x-hidden">
       <div className="w-[100vw] min-h-[600px] h-[100vh] relative">
+        <div className="w-[100%] h-[80px]">{/* header Margin */}</div>
         <div className="mt-4 ml-4">
           <Btn btnType={{text:"About Me", moveTo:"about"}}/>
           <Btn btnType={{text:"Skills", moveTo:""}}/>

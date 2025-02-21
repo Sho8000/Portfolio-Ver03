@@ -1,3 +1,7 @@
+"use client"
+import { useHbgBtnContext } from "@/app/context/HbgContext";
+import { useEffect } from "react";
+
 interface CircleProps {
   radius:number;
   type:"fill"|"stroke";
@@ -42,8 +46,19 @@ export const CircleSVG = ({circleType}:CircleType) => {
 };
 
 export const HbgMenu = () => {
+  const {hbgState,openSide} = useHbgBtnContext();
+
+  useEffect(()=>{
+    console.log(hbgState)
+  },[hbgState,openSide])
+
+  const HbgClickHandler = () => {
+    openSide();
+    console.log("clicked")
+  }
+
   return (
-    <button>
+    <button onClick={HbgClickHandler}>
       <svg width="60" height="47">
         <rect x="10" y="10" rx="1" ry="1" width="40" height="2"
         style={{fill:"white",stroke:"white",strokeWidth:5}} />
@@ -53,5 +68,16 @@ export const HbgMenu = () => {
         style={{fill:"white",stroke:"white",strokeWidth:5}} />
       </svg>  
     </button> 
+  )
+}
+
+export const CloseBtn = () => {
+  return (
+    <button>
+      <svg width="50" height="50">
+        <line x1="10" y1="10" x2="40" y2="40" stroke="white" strokeWidth="3px"/>
+        <line x1="10" y1="40" x2="40" y2="10" stroke="white" strokeWidth="3px" />
+      </svg>  
+    </button>  
   )
 }
