@@ -12,8 +12,8 @@ export default function HomeMain() {
         </div>
         <div className="mt-4 ml-4">
           <Btn btnType={{text:"About Me", moveTo:"about"}}/>
-          <Btn btnType={{text:"Skills", moveTo:""}}/>
           <Btn btnType={{text:"WorkExperience", moveTo:""}}/>
+          <Btn btnType={{text:"Projects", moveTo:"project"}}/>
         </div>
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <Image

@@ -6,25 +6,20 @@ import { HbgBtnContextProvider } from "../context/HbgContext";
 export default function About() {
   return (
     <>
-      <HbgBtnContextProvider>
-        <Header/>
-        <Sidebar/>
-        <main>
-          <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+      <main>
+        <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+        
+          This is About
+          About Main
+          Project
+          WorkExperience
           
-            This is About
-            About Main
-            Project
-            WorkExperience
-            
-          </section>
-          <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
-          </section>
-          <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
-          </section>
-        </main>
-      </HbgBtnContextProvider>
-      <Footer contact={true}/>
+        </section>
+        <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+        </section>
+        <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+        </section>
+      </main>
     </>
   );
 }
