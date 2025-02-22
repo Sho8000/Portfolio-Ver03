@@ -18,7 +18,7 @@ export default function LandingPage() {
           </div>
           <div className="flex justify-center gap-4">
             
-            <BtnWithCircle btnWithCircleType={{text:"Preparing" ,radius:8 ,type:"stroke", color:"white", moveTo:'home'}} />
+            <BtnWithCircle btnWithCircleType={{text:"Preparing" ,radius:8 ,type:"fill", color:"white", moveTo:'home'}} />
             <BtnWithCircle btnWithCircleType={{text:"Sound OFF" ,radius:8 ,type:"stroke", color:"white", moveTo:'home'}} />
           </div>
         </div>

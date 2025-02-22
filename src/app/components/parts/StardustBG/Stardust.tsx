@@ -26,7 +26,7 @@ const Stardust: React.FC = () => {
         for (let i = 0; i < numCircles; i++) {
           const x = Math.random() * canvas.width;
           const y = Math.random() * canvas.height;
-          const radius = Math.random() * 2;
+          const radius = Math.random() * 5;
           const dx = (Math.random()-0.5) * 1.5;
           const dy = (Math.random()-0.5) * 1.5;
           const opacity = Math.random();
@@ -70,6 +70,7 @@ const Stardust: React.FC = () => {
             ctx.beginPath();
             ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
             ctx.strokeStyle = `rgba(255, 255, 255, ${circle.opacity})`;
+            ctx.filter = "blur(1px)"
             ctx.stroke();
           })
           requestAnimationFrame(animate);

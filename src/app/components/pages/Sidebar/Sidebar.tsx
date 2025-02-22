@@ -18,7 +18,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     sidebarAnimation.current
-      .to(sidebarRef.current, { x: 0, duration: 1, transformOrigin: "right" })
+      .to(sidebarRef.current, { x: 0, duration: 0.5, transformOrigin: "right" })
       .reverse(); // Start in a reversed state (hidden)
 
     return () => {
