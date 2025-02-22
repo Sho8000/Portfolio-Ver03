@@ -12,7 +12,7 @@ export default function RootLayout({
       <Header/>
       <Sidebar/>
       {children}
-      <Footer contact={true}/>
+      <Footer/>
     </>
   );
 }

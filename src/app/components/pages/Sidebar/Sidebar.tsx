@@ -54,7 +54,6 @@ export default function Sidebar() {
               <Btn btnType={{text:"About Me", moveTo:"about"}}/>
               <Btn btnType={{text:"Work Experience", moveTo:""}}/>
               <Btn btnType={{text:"Project", moveTo:"project"}}/>
-              <Btn btnType={{text:"Contact", moveTo:"contact"}}/>
             </div>
           </div>
         </div>

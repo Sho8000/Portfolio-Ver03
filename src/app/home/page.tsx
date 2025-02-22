@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HomeMain/>
-      <Footer contact={true}/>
+      <Footer/>
     </>
   );
 }
