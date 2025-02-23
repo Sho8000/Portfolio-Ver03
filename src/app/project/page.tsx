@@ -1,34 +1,11 @@
 "use client"
 import { useState } from "react";
 import { Reorder } from "motion/react";
-import MovieImg from "@/../public/MovieSuggestingApp.png"
-import PokemonImg from "@/../public/PokemonImgPC.png"
-import CommingSoonImg from "@/../public/commingSoon.png"
-import AKiFAiRWAY from "@/../public/AKiFAiRWAY.png"
 import Image from "next/image";
 import Style from "./project.module.css"
+import { initialProjectList } from "../lib/db";
 
 export default function Project() {
-  const initialProjectList = [
-    {
-      projectName:"AKiF AiRWAY",
-      imgUrl:AKiFAiRWAY,
-      type:"Client's Project",
-      url:"https://akifairway-englishsite.netlify.app/"
-    },
-    {
-      projectName:"MovieSuggestingApp",
-      imgUrl:MovieImg,
-      type:"Personal Project",
-      url:"https://sho8000.github.io/movie-suggestion-app/"
-    },
-    {
-      projectName:"Pokemon Valorant Charactor",
-      imgUrl:PokemonImg,
-      type:"Personal Project",
-      url:"https://sho8000.github.io/Pokemon-Valorant/"
-    },
-  ]
   const [projectList,setProjectList] = useState(initialProjectList)
 
   const projectLinkHandler = (url:string) => {
