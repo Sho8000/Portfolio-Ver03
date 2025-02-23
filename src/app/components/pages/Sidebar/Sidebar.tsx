@@ -7,12 +7,14 @@ import Style from "./Sidebar.module.css"
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useHbgBtnContext } from "@/app/context/HbgContext";
+import { useRouter } from "next/navigation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function Sidebar() {
-  const {hbgState, closeSide} = useHbgBtnContext();
+  const router = useRouter();
+  const {hbgState,linkTo, closeSide,setLinkTo} = useHbgBtnContext();
   const sidebarRef = useRef(null)
   const sidebarAnimation = useRef(gsap.timeline({paused:true}));
   const sidebarItemAnimation = useRef(gsap.timeline({paused:true}));
@@ -23,7 +25,7 @@ export default function Sidebar() {
       .reverse(); // Start in a reversed state (hidden)
 
     sidebarItemAnimation.current
-      .fromTo(".itemAnimation",{scaleY:0},{scaleY:1,stagger:0.5})
+      .to(".itemAnimation",{scaleY:1,stagger:0.5})
       .reverse();
 
     return () => {
@@ -34,6 +36,7 @@ export default function Sidebar() {
 
   useEffect(()=>{
     if(hbgState){
+      setLinkTo(null)
       sidebarAnimation.current
         .play()
         .then(()=>{
@@ -44,6 +47,10 @@ export default function Sidebar() {
         .reverse()
         .then(()=>{
           sidebarAnimation.current.reverse();
+        }).then(()=>{
+          if(linkTo){
+            router.push(`/${linkTo}`)
+          }
         })
     }
 
@@ -57,22 +64,27 @@ export default function Sidebar() {
     closeSide();
   }
 
+  const linkBtnHandler = (link:string) => {
+    setLinkTo(link)
+    closeSide();
+  }
+
   return (
     <>
       <div ref={sidebarRef} className={`fixed max-w-[100vw] w-[320px] h-[99vh] translate-x-[320px] right-0 z-10 overflow-hidden border-l-2 border-gray-400 ${Style.mainBG}`}>
         <Stardust/>
           <div className="flex flex-col mt-5">
-            <div className="ml-auto pr-4 w-fit itemAnimation" onClick={closeBtnHandler}>
+            <div className="ml-auto pr-4 w-fit itemAnimation scale-y-0" onClick={closeBtnHandler}>
               <CloseBtn/>
             </div>
             <div className="flex flex-col justify-center w-fit gap-10 ml-5">
-              <div className="itemAnimation">
+              <div className="itemAnimation scale-y-0" onClick={()=>{linkBtnHandler("about")}}>
                 <Btn btnType={{text:"About Me", moveTo:"about"}}/>
               </div>
-              <div className="itemAnimation">
+              <div className="itemAnimation scale-y-0" onClick={()=>{linkBtnHandler("")}}>
                 <Btn btnType={{text:"Work Experience", moveTo:""}}/>
               </div>
-              <div className="itemAnimation">
+              <div className="itemAnimation scale-y-0" onClick={()=>{linkBtnHandler("project")}}>
                 <Btn btnType={{text:"Project", moveTo:"project"}}/>
               </div>
             </div>

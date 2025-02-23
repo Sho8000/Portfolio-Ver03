@@ -1,17 +1,19 @@
 "use client"
-import { createContext, useContext, useState } from "react";
+import { createContext, Dispatch, SetStateAction, useContext, useState } from "react";
 
 type HbgState = {
   hbgState:boolean;
+  linkTo:string|null;
   openSide:()=>void;
   closeSide:()=>void;
+  setLinkTo:Dispatch<SetStateAction<string|null>>;
 }
 
 const HbgBtnContext = createContext<HbgState | undefined>(undefined);
 
 const HbgBtnContextProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
   const [hbgState,setHbgState] = useState(false)
-  const [isOpen,setIsOpen] = useState(false)
+  const [linkTo,setLinkTo] = useState<string|null>(null)
 
   const openSide = () => {
     setHbgState(true)
@@ -21,7 +23,7 @@ const HbgBtnContextProvider: React.FC<{children: React.ReactNode}> = ({children}
     setHbgState(false)
   }
 
-  const value = {hbgState,openSide,closeSide}
+  const value = {hbgState,linkTo,openSide,closeSide,setLinkTo}
 
   return (
     <HbgBtnContext.Provider value={value}>
