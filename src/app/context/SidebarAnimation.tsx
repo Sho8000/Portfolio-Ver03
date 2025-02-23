@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 type SideAnimeState = {
   sidebarRef:RefObject<HTMLDivElement|null>;
   sidebarAnimation:RefObject<GSAPTimeline>;
-  sidebarItemAnimation:RefObject<GSAPTimeline>;
 }
 
 const SideAnimeContext = createContext<SideAnimeState | undefined>(undefined);
@@ -14,10 +13,9 @@ const SideAnimeContext = createContext<SideAnimeState | undefined>(undefined);
 const SideAnimeContextProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
   const sidebarRef = useRef(null)
   const sidebarAnimation = useRef(gsap.timeline({paused:true}));
-  const sidebarItemAnimation = useRef(gsap.timeline({paused:true}));
 
 
-  const value = {sidebarRef,sidebarAnimation,sidebarItemAnimation}
+  const value = {sidebarRef,sidebarAnimation}
 
   return (
     <SideAnimeContext.Provider value={value}>

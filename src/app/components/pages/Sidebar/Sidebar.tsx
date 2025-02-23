@@ -16,46 +16,34 @@ gsap.registerPlugin(useGSAP,ScrollTrigger);
 export default function Sidebar() {
   const router = useRouter();
   const {hbgState,linkTo, closeSide,setLinkTo} = useHbgBtnContext();
-  const {sidebarRef,sidebarAnimation,sidebarItemAnimation} = useSideAnimeContext();
+  const {sidebarRef,sidebarAnimation} = useSideAnimeContext();
 
   useEffect(() => {
     sidebarAnimation.current
-      .to(sidebarRef.current, { x: 0, duration: 0.1, transformOrigin: "right" })
-      .reverse(); // Start in a reversed state (hidden)
-
-    sidebarItemAnimation.current
+      .to(sidebarRef.current, { x: 0, duration: 0.5, transformOrigin: "right" })
       .to(".itemAnimation",{scaleY:1,stagger:0.5})
-      .reverse();
+      .reverse(); // Start in a reversed state (hidden)
 
     return () => {
       sidebarAnimation.current.kill();
-      sidebarItemAnimation.current.kill();
     };
   }, []);
 
   useEffect(()=>{
     if(hbgState){
       setLinkTo(null)
-      sidebarAnimation.current
-        .play()
-        .then(()=>{
-          sidebarItemAnimation.current.play();
-        })
+      sidebarAnimation.current.play()
     } else {
-      sidebarItemAnimation.current
-        .reverse()
-        .then(()=>{
-          sidebarAnimation.current.reverse();
-        }).then(()=>{
-          if(linkTo){
-            router.push(`/${linkTo}`)
-          }
-        })
+      sidebarAnimation.current.reverse()
+      .then(()=>{
+        if(linkTo){
+          router.push(`/${linkTo}`)
+        }
+      })
     }
 
     return () => {
       sidebarAnimation.current.kill();
-      sidebarItemAnimation.current.kill();
     }; 
   },[hbgState])
 
