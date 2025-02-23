@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <main>
-        <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+        <section id="main" className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
         
           This is About
           About Main
@@ -15,9 +15,10 @@ export default function About() {
           WorkExperience
           
         </section>
-        <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+        <section id="project" className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+          project
         </section>
-        <section className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
+        <section id="work" className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
         </section>
       </main>
     </>

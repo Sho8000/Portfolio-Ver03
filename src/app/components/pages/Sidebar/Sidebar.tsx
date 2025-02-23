@@ -66,7 +66,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div ref={sidebarRef} className={`fixed max-w-[100vw] w-[320px] h-[99vh] translate-x-[320px] right-0 z-10 overflow-hidden border-l-2 border-gray-400 ${Style.mainBG}`}>
+      <div ref={sidebarRef} className={`fixed max-w-[100vw] w-[320px] h-[100vh] translate-x-[320px] right-0 z-10 overflow-hidden border-l-2 border-gray-400 ${Style.mainBG}`}>
         <Stardust/>
           <div className="flex flex-col mt-5">
             <div className="ml-auto pr-4 w-fit itemAnimation scale-y-0" onClick={closeBtnHandler}>
@@ -77,10 +77,16 @@ export default function Sidebar() {
                 <Btn btnType={{text:"About Me", moveTo:"about"}}/>
               </div>
               <div className="itemAnimation scale-y-0">
-                <Btn btnType={{text:"Work Experience", moveTo:""}}/>
+                <Btn btnType={{text:"Work Experience", moveTo:"about/#work"}}/>
               </div>
               <div className="itemAnimation scale-y-0">
-                <Btn btnType={{text:"Project", moveTo:"project"}}/>
+                <Btn btnType={{text:"Project", moveTo:"about/#project"}}/>
+              </div>
+              <div className="itemAnimation scale-y-0">
+                <Btn btnType={{text:"Project Links", moveTo:"project"}}/>
+              </div>
+              <div className="itemAnimation scale-y-0">
+                <Btn btnType={{text:"Contact", moveTo:""}}/>
               </div>
             </div>
           </div>

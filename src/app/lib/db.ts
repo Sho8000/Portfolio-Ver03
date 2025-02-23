@@ -7,6 +7,35 @@ import PokemonImg from "@/../public/PokemonImgPC.png"
 import CommingSoonImg from "@/../public/commingSoon.png"
 import AKiFAiRWAY from "@/../public/AKiFAiRWAY.png"
 
+export const aboutMain = [
+  {},
+]
+export const aboutProject = [
+  {
+    text:"",
+    img:""
+  },
+  {
+    text:"",
+    img:""
+  },
+  {
+    text:"",
+    img:""
+  },
+]
+export const aboutWorkExperience = [
+  {
+    text:"",
+    img:""
+  },
+  {
+    text:"",
+    img:""
+  },
+]
+
+
 export const initialProjectList = [
   {
     projectName:"AKiF AiRWAY",

@@ -2,8 +2,11 @@
 import { useRouter } from "next/navigation";
 import Style from "./Button.module.css"
 import { CircleSVG } from "../svg/AllSvgs";
-import { div } from "motion/react-client";
 import { useHbgBtnContext } from "@/app/context/HbgContext";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 interface BtnProps {
   text:string;
@@ -27,20 +30,27 @@ interface BtnWithCircleType {
 }
 
 export const Btn = ({btnType}:BtnType) => {
-  const router = useRouter();
   const {closeSide,setLinkTo} = useHbgBtnContext();
+  const changeUnderbarSize = gsap.timeline()
 
-  const btnClickHandler = (link:string) => {
-    setLinkTo(link)
-    closeSide();
+  const btnClickHandler = (link:string,text:string) => {
+    changeUnderbarSize
+      .to(`.under_${text.replace(/\s/g, "")}`,{scaleY:0.1,duration:0.5,transformOrigin:"top"})
+      .then(()=>{
+        setLinkTo(link)
+        closeSide();
+        /* keep until,,, */
+        changeUnderbarSize
+        .to(`.under_${text.replace(/\s/g, "")}`,{scaleY:1,duration:0.5,transformOrigin:"top"})  
+      })
   }
 
   return (
     <>
       <div>
-        <button className={`flex flex-col items-center border-white ${Style.buttonBorder}`} onClick={()=>{btnClickHandler(btnType.moveTo)}}>
+        <button className={`flex flex-col items-center border-white ${Style.buttonBorder}`} onClick={()=>{btnClickHandler(btnType.moveTo,btnType.text)}}>
           <p className="text-white">{btnType.text}</p>
-          <div className="bg-white w-[100%] h-4"></div>
+          <div className={`bg-white w-[100%] h-4 under_${btnType.text.replace(/\s/g, "")}`}></div>
         </button>
       </div>
     </>
