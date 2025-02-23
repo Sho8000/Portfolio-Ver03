@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Stardust from "./components/parts/StardustBG/Stardust";
 import { HbgBtnContextProvider } from "./context/HbgContext";
+import { SideAnimeContextProvider } from "./context/SidebarAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +32,9 @@ export default function RootLayout({
       >
         <Stardust/>
           <HbgBtnContextProvider>
-            {children}
+            <SideAnimeContextProvider>
+              {children}
+            </SideAnimeContextProvider>
           </HbgBtnContextProvider>
       </body>
     </html>

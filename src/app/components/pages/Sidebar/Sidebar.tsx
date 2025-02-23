@@ -10,18 +10,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { useHbgBtnContext } from "@/app/context/HbgContext";
 import { useRouter } from "next/navigation";
+import { useSideAnimeContext } from "@/app/context/SidebarAnimation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function Sidebar() {
   const router = useRouter();
   const {hbgState,linkTo, closeSide,setLinkTo} = useHbgBtnContext();
-  const sidebarRef = useRef(null)
-  const sidebarAnimation = useRef(gsap.timeline({paused:true}));
-  const sidebarItemAnimation = useRef(gsap.timeline({paused:true}));
+  const {sidebarRef,sidebarAnimation,sidebarItemAnimation} = useSideAnimeContext();
 
   useEffect(() => {
     sidebarAnimation.current
-      .to(sidebarRef.current, { x: 0, duration: 0.5, transformOrigin: "right" })
+      .to(sidebarRef.current, { x: 0, duration: 0.1, transformOrigin: "right" })
       .reverse(); // Start in a reversed state (hidden)
 
     sidebarItemAnimation.current
