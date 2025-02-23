@@ -7,22 +7,21 @@ import Style from "./Sidebar.module.css"
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useHbgBtnContext } from "@/app/context/HbgContext";
-import { useRouter } from "next/navigation";
 import { useSideAnimeContext } from "@/app/context/SidebarAnimation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function Sidebar() {
-  const router = useRouter();
   const {hbgState,linkTo, closeSide,setLinkTo} = useHbgBtnContext();
-  const {sidebarRef,sidebarAnimation} = useSideAnimeContext();
+  const {underbarRef,sidebarRef,sidebarAnimation} = useSideAnimeContext();
 
   useEffect(() => {
     sidebarAnimation.current
       .to(sidebarRef.current, { x: 0, duration: 0.5, transformOrigin: "right" })
       .to(".itemAnimation",{scaleY:1,stagger:0.5})
-      .reverse(); // Start in a reversed state (hidden)
+      .to(underbarRef.current,{scaleY:1,duration:0.5,transformOrigin:"top"})
+      .reversed(true); // Start in a reversed state (hidden)
 
     return () => {
       sidebarAnimation.current.kill();
@@ -34,12 +33,11 @@ export default function Sidebar() {
       setLinkTo(null)
       sidebarAnimation.current.play()
     } else {
-      sidebarAnimation.current.reverse()
-      .then(()=>{
-        if(linkTo){
-          router.push(`/${linkTo}`)
-        }
-      })
+      sidebarAnimation.current.reverse().eventCallback("onReverseComplete", () => {
+      if (linkTo) {
+        window.location.href = `/${linkTo}`;
+      }
+    });
     }
 
     return () => {

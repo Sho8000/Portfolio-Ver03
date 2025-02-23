@@ -6,6 +6,7 @@ import { useHbgBtnContext } from "@/app/context/HbgContext";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useSideAnimeContext } from "@/app/context/SidebarAnimation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 interface BtnProps {
@@ -31,6 +32,7 @@ interface BtnWithCircleType {
 
 export const Btn = ({btnType}:BtnType) => {
   const {closeSide,setLinkTo} = useHbgBtnContext();
+  const {underbarRef} = useSideAnimeContext();
   const changeUnderbarSize = gsap.timeline()
 
   const btnClickHandler = (link:string,text:string) => {
@@ -39,9 +41,6 @@ export const Btn = ({btnType}:BtnType) => {
       .then(()=>{
         setLinkTo(link)
         closeSide();
-        /* keep until,,, */
-        changeUnderbarSize
-        .to(`.under_${text.replace(/\s/g, "")}`,{scaleY:1,duration:0.5,transformOrigin:"top"})  
       })
   }
 
@@ -50,7 +49,7 @@ export const Btn = ({btnType}:BtnType) => {
       <div>
         <button className={`flex flex-col items-center border-white ${Style.buttonBorder}`} onClick={()=>{btnClickHandler(btnType.moveTo,btnType.text)}}>
           <p className="text-white">{btnType.text}</p>
-          <div className={`bg-white w-[100%] h-4 under_${btnType.text.replace(/\s/g, "")}`}></div>
+          <div ref={underbarRef} className={`bg-white w-[100%] h-4 under_${btnType.text.replace(/\s/g, "")}`}></div>
         </button>
       </div>
     </>

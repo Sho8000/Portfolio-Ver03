@@ -19,7 +19,8 @@ const Stardust: React.FC = () => {
     const canvas = canvasRef.current;
     let circles:circleObject[] = [];
     const numCircles = 150;
-
+    let animationFrameId: number;
+    
     if(canvas){
       const initialCircle = () => {
         circles = [];
@@ -73,7 +74,7 @@ const Stardust: React.FC = () => {
             ctx.filter = "blur(1px)"
             ctx.stroke();
           })
-          requestAnimationFrame(animate);
+          animationFrameId = requestAnimationFrame(animate);
         }
 
         window.addEventListener('resize', updateCanvasSize);
@@ -81,6 +82,7 @@ const Stardust: React.FC = () => {
 
         return () => {
           window.removeEventListener('resize', updateCanvasSize);
+          cancelAnimationFrame(animationFrameId);
         };
       }
     }
