@@ -64,11 +64,6 @@ export default function Sidebar() {
     closeSide();
   }
 
-  const linkBtnHandler = (link:string) => {
-    setLinkTo(link)
-    closeSide();
-  }
-
   return (
     <>
       <div ref={sidebarRef} className={`fixed max-w-[100vw] w-[320px] h-[99vh] translate-x-[320px] right-0 z-10 overflow-hidden border-l-2 border-gray-400 ${Style.mainBG}`}>
