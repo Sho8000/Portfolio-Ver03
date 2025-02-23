@@ -78,13 +78,13 @@ export default function Sidebar() {
               <CloseBtn/>
             </div>
             <div className="flex flex-col justify-center w-fit gap-10 ml-5">
-              <div className="itemAnimation scale-y-0" onClick={()=>{linkBtnHandler("about")}}>
+              <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"About Me", moveTo:"about"}}/>
               </div>
-              <div className="itemAnimation scale-y-0" onClick={()=>{linkBtnHandler("")}}>
+              <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"Work Experience", moveTo:""}}/>
               </div>
-              <div className="itemAnimation scale-y-0" onClick={()=>{linkBtnHandler("project")}}>
+              <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"Project", moveTo:"project"}}/>
               </div>
             </div>

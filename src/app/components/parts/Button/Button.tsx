@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import Style from "./Button.module.css"
 import { CircleSVG } from "../svg/AllSvgs";
 import { div } from "motion/react-client";
+import { useHbgBtnContext } from "@/app/context/HbgContext";
 
 interface BtnProps {
   text:string;
@@ -27,15 +28,17 @@ interface BtnWithCircleType {
 
 export const Btn = ({btnType}:BtnType) => {
   const router = useRouter();
-  
-  const btnClickHandler = (newPage:string) => {
-    router.push(`/${newPage}`)
+  const {closeSide,setLinkTo} = useHbgBtnContext();
+
+  const btnClickHandler = (link:string) => {
+    setLinkTo(link)
+    closeSide();
   }
 
   return (
     <>
       <div>
-        <button className={`flex flex-col items-center border-white ${Style.buttonBorder}`}/*  onClick={()=>{btnClickHandler(btnType.moveTo)}} */>
+        <button className={`flex flex-col items-center border-white ${Style.buttonBorder}`} onClick={()=>{btnClickHandler(btnType.moveTo)}}>
           <p className="text-white">{btnType.text}</p>
           <div className="bg-white w-[100%] h-4"></div>
         </button>
