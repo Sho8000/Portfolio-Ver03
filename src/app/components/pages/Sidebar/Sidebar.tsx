@@ -58,7 +58,7 @@ export default function Sidebar() {
             <div className="ml-auto pr-4 w-fit itemAnimation scale-y-0" onClick={closeBtnHandler}>
               <CloseBtn/>
             </div>
-            <div className="flex flex-col justify-center w-fit gap-10 ml-5">
+            <div className="flex flex-col justify-center w-fit gap-5 ml-5">
               <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"About Me", moveTo:"about"}}/>
               </div>

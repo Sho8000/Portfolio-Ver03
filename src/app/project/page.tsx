@@ -3,10 +3,10 @@ import { useState } from "react";
 import { Reorder } from "motion/react";
 import Image from "next/image";
 import Style from "./project.module.css"
-import { initialProjectList } from "../lib/db";
+import { MainDBEng } from "../lib/db";
 
 export default function Project() {
-  const [projectList,setProjectList] = useState(initialProjectList)
+  const [projectList,setProjectList] = useState(MainDBEng[0].project)
 
   const projectLinkHandler = (url:string) => {
     window.location.href = url

@@ -1,5 +1,5 @@
 "use client"
-import { footerInfo } from "@/app/lib/db";
+import { MainDBEng } from "@/app/lib/db";
 import Image from "next/image";
 
 /* Contact me without props */
@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         <div className="min-w-max flex gap-2 mt-3">
-        {footerInfo.map((item,index)=>
+        {MainDBEng[0].footerInfo.map((item,index)=>
           <Image
           key={index}
           src={item.img}

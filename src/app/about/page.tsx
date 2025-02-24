@@ -8,7 +8,8 @@ export default function About() {
     <>
       <main>
         <section id="main" className="w-[100vw] min-h-[100vh] overflow-x-hidden border-2">
-        
+        <div className="h-[80px]"></div>
+
           This is About
           About Main
           Project
