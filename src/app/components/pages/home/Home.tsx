@@ -1,7 +1,6 @@
-import { Btn } from "../../parts/Button/Button";
+import { Btn, MainPageBtn } from "../../parts/Button/Button";
 import Image from "next/image";
 import MyPicture from "@/../public/TeachingSqare.png"
-import Footer from "../Footer/Footer";
 
 export default function HomeMain() {
   return (
@@ -11,9 +10,9 @@ export default function HomeMain() {
           <h2 className="text-white text-3xl font-bold pt-4 pl-4">Sho Yoshimura</h2>
         </div>
         <div className="mt-4 ml-4">
-          <Btn btnType={{text:"About Me", moveTo:"about"}}/>
-          <Btn btnType={{text:"WorkExperience", moveTo:""}}/>
-          <Btn btnType={{text:"Projects", moveTo:"project"}}/>
+          <MainPageBtn btnType={{text:"About Me", moveTo:"about"}}/>
+          <MainPageBtn btnType={{text:"WorkExperience", moveTo:""}}/>
+          <MainPageBtn btnType={{text:"Projects", moveTo:"project"}}/>
         </div>
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <Image
