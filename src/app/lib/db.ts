@@ -2,6 +2,7 @@ import EmailIcon from "@/../public/Email.png"
 import GithubIcon from "@/../public/github.png"
 import InstagramIcon from "@/../public/instagramLogo.png"
 import LinkedInIcon from "@/../public/LinkedIn.png"
+import SparkImg from "@/../public/SparkCard.png"
 import MovieImg from "@/../public/MovieSuggestingApp.png"
 import PokemonImg from "@/../public/PokemonImgPC.png"
 import CommingSoonImg from "@/../public/commingSoon.png"
@@ -42,6 +43,12 @@ export const initialProjectList = [
     imgUrl:AKiFAiRWAY,
     type:"Client's Project",
     url:"https://akifairway-englishsite.netlify.app/"
+  },
+  {
+    projectName:"SparkCard",
+    imgUrl:SparkImg,
+    type:"Personal Project",
+    url:"https://"
   },
   {
     projectName:"MovieSuggestingApp",

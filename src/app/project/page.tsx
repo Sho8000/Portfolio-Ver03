@@ -17,7 +17,7 @@ export default function Project() {
       <section className="w-[100vw] min-h-[100vh] overflow-x-hidden">
         <div className="h-[80px]"></div>
         <h2 className="text-white text-3xl font-bold text-center p-3">My Project (Click to See)</h2>
-        <div className="w-[80%] m-auto">
+        <div className="w-[600px] m-auto">
           <Reorder.Group values={projectList} axis='y' onReorder={setProjectList} className='draggable-container'>
             {projectList.map((item,index)=>(
               index===0?(
@@ -28,7 +28,7 @@ export default function Project() {
   /*                   whileDrag={{backgroundColor:'#f0a'}} */
                     className='draggable-item'
                   >
-                    <div className="flex justify-center items-center w-[70%] h-[400px] bg-white m-auto overflow-hidden border-2 border-white rounded-lg relative" onClick={()=>{projectLinkHandler(item.url)}}>
+                    <div className="flex justify-center items-center w-[100%] h-[300px] bg-white m-auto overflow-hidden border-2 border-white rounded-lg relative" onClick={()=>{projectLinkHandler(item.url)}}>
                       <Image
                         src={item.imgUrl}
                         alt={item.projectName}
