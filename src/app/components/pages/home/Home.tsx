@@ -7,9 +7,12 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import Footer from "../Footer/Footer";
+import { useHbgBtnContext } from "@/app/context/HbgContext";
+import { useHomeAnimeBtnContext } from "@/app/context/HomeAnime";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function HomeMain() {
+  const {animationSwitch,linkTo} = useHomeAnimeBtnContext();
   const homeAnimation = gsap.timeline();
 
   useEffect(() => {
@@ -19,6 +22,20 @@ export default function HomeMain() {
       homeAnimation.kill();
     };
   }, []);
+
+  useEffect(()=>{
+    if(linkTo){
+      homeAnimation
+        .to(".homeAnimation",{scaleY:0,duration:0.5,stagger:-0.5})
+        .then(()=>{
+          window.location.href = `/${linkTo}`;
+        })
+    }
+    return () => {
+      homeAnimation.kill();
+    }; 
+  },[animationSwitch])
+
       
   return (
     <>

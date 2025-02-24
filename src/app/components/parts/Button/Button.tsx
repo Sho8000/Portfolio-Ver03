@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLandingAnimeContext } from "@/app/context/LandingAnimation";
+import { useHomeAnimeBtnContext } from "@/app/context/HomeAnime";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 interface BtnProps {
@@ -30,15 +31,22 @@ interface BtnWithCircleType {
 }
 
 export const MainPageBtn = ({btnType}:BtnType) => {
+  const {switchAnimation,setLink} = useHomeAnimeBtnContext();
+  const changeUnderbarSize = gsap.timeline()
 
-  const btnClickHandler = (linkTo:string) => {
-    window.location.href = `/${linkTo}`;
+  const btnClickHandler = (link:string,text:string) => {
+    setLink(link)
+    changeUnderbarSize
+      .to(`.under_${text.replace(/\s/g, "")}`,{scaleY:0.1,duration:0.5,transformOrigin:"top"})
+      .then(()=>{
+        switchAnimation();
+      })
   }
 
   return (
     <>
       <div>
-        <button className={`flex flex-col items-center border-white ${Style.buttonBorder}`} onClick={()=>{btnClickHandler(btnType.moveTo)}}>
+        <button className={`flex flex-col items-center border-white ${Style.buttonBorder}`} onClick={()=>{btnClickHandler(btnType.moveTo,btnType.text)}}>
           <p className="text-white">{btnType.text}</p>
           <div className={`bg-white w-[100%] h-4 under_${btnType.text.replace(/\s/g, "")}`}></div>
         </button>

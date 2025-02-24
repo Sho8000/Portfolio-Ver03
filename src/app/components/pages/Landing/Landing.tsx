@@ -27,9 +27,7 @@ export default function LandingPage() {
     useEffect(()=>{
       if(isLandingUnderbarDone){
         landingClickAnimation
-        .to(".landingBtnAnime3",{scaleY:0,transformOrigin:"top"})
-        .to(".landingBtnAnime2",{scaleY:0,transformOrigin:"top"})
-        .to(".landingBtnAnime1",{scaleY:0,transformOrigin:"top"})
+        .to(".landingBtnAnime",{scaleY:0,stagger:-0.5,transformOrigin:"top"})
         .then(()=>{
           changeLandingUnderStatus();
           window.location.href = `/home`;
@@ -48,13 +46,13 @@ export default function LandingPage() {
           <CircleProgressBar/>
         </div>
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] landingNameAnime">
-          <h1 className="text-3xl font-bold  text-white landingBtnAnime1">Sho Yoshimura</h1>
+          <h1 className="text-3xl font-bold  text-white landingBtnAnime">Sho Yoshimura</h1>
         </div>
         <div className="absolute w-[400px] top-[65%] left-[50%] translate-x-[-50%] translate-y-[-50%] landingContentsAnime opacity-0">
-          <div className="landingBtnAnime2">
+          <div className="landingBtnAnime">
             <p className="text-white text-xl text-center">Turn on your sound to enjoy!</p>
           </div>
-          <div className="flex justify-center gap-4 landingBtnAnime3">
+          <div className="flex justify-center gap-4 landingBtnAnime">
             <div>
               <BtnWithCircle btnWithCircleType={{text:"Preparing" ,radius:8 ,type:"fill", color:"white", moveTo:'home'}} />
             </div>
