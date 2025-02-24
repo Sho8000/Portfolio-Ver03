@@ -4,6 +4,7 @@ import "./globals.css";
 import Stardust from "./components/parts/StardustBG/Stardust";
 import { HbgBtnContextProvider } from "./context/HbgContext";
 import { SideAnimeContextProvider } from "./context/SidebarAnimation";
+import { LandingAnimeContextProvider } from "./context/LandingAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,11 +32,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Stardust/>
-          <HbgBtnContextProvider>
+        <HbgBtnContextProvider>
+          <LandingAnimeContextProvider>
             <SideAnimeContextProvider>
               {children}
             </SideAnimeContextProvider>
-          </HbgBtnContextProvider>
+          </LandingAnimeContextProvider>
+        </HbgBtnContextProvider>
       </body>
     </html>
   );
