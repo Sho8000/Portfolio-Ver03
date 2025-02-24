@@ -53,10 +53,10 @@ export const Btn = ({btnType}:BtnType) => {
   const changeUnderbarSize = gsap.timeline()
 
   const btnClickHandler = (link:string,text:string) => {
+    setLinkTo(link)
     changeUnderbarSize
       .to(`.under_${text.replace(/\s/g, "")}`,{scaleY:0.1,duration:0.5,transformOrigin:"top"})
       .then(()=>{
-        setLinkTo(link)
         closeSide();
       })
   }

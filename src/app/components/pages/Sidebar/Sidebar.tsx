@@ -14,26 +14,27 @@ gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function Sidebar() {
   const {hbgState,linkTo, closeSide,setLinkTo} = useHbgBtnContext();
-  const {underbarRef,sidebarRef,sidebarAnimation} = useSideAnimeContext();
+  const {sidebarAnimation} = useSideAnimeContext();
+  /*const sidebarAnimation = gsap.timeline();*/
+  //I don't know why but without Context, animation won't work
 
   useEffect(() => {
-    sidebarAnimation.current
-      .to(sidebarRef.current, { x: 0, duration: 0.5, transformOrigin: "right" })
+    sidebarAnimation
+      .to(".sidebarHandler", { x: 0, duration: 0.5, transformOrigin: "right" })
       .to(".itemAnimation",{scaleY:1,stagger:0.5})
-      .to(underbarRef.current,{scaleY:1,duration:0.5,transformOrigin:"top"})
       .reversed(true); // Start in a reversed state (hidden)
 
     return () => {
-      sidebarAnimation.current.kill();
+      sidebarAnimation.kill();
     };
   }, []);
 
   useEffect(()=>{
     if(hbgState){
       setLinkTo(null)
-      sidebarAnimation.current.play()
+      sidebarAnimation.play()
     } else {
-      sidebarAnimation.current.reverse().eventCallback("onReverseComplete", () => {
+      sidebarAnimation.reverse().eventCallback("onReverseComplete", () => {
       if (linkTo) {
         window.location.href = `/${linkTo}`;
       }
@@ -41,7 +42,7 @@ export default function Sidebar() {
     }
 
     return () => {
-      sidebarAnimation.current.kill();
+      sidebarAnimation.kill();
     }; 
   },[hbgState])
 
@@ -51,7 +52,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div ref={sidebarRef} className={`fixed max-w-[100vw] w-[320px] h-[100vh] translate-x-[320px] right-0 z-10 overflow-hidden border-l-2 border-gray-400 ${Style.mainBG}`}>
+      <div className={`fixed max-w-[100vw] w-[320px] h-[100vh] translate-x-[320px] right-0 z-10 overflow-hidden border-l-2 border-gray-400 ${Style.mainBG} sidebarHandler`}>
         <Stardust/>
           <div className="flex flex-col mt-5">
             <div className="ml-auto pr-4 w-fit itemAnimation scale-y-0" onClick={closeBtnHandler}>

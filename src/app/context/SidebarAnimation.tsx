@@ -1,23 +1,18 @@
 "use client"
-import { createContext, RefObject, useContext, useRef } from "react";
+import { createContext, useContext } from "react";
 import { gsap } from "gsap";
 
-
 type SideAnimeState = {
-  underbarRef:RefObject<HTMLDivElement|null>;
-  sidebarRef:RefObject<HTMLDivElement|null>;
-  sidebarAnimation:RefObject<GSAPTimeline>;
+  sidebarAnimation:GSAPTimeline;
 }
 
 const SideAnimeContext = createContext<SideAnimeState | undefined>(undefined);
 
 const SideAnimeContextProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
-  const sidebarRef = useRef(null)
-  const underbarRef = useRef(null)
-  const sidebarAnimation = useRef(gsap.timeline({paused:true}));
+  const sidebarAnimation = gsap.timeline();
 
 
-  const value = {underbarRef,sidebarRef,sidebarAnimation}
+  const value = {sidebarAnimation}
 
   return (
     <SideAnimeContext.Provider value={value}>
