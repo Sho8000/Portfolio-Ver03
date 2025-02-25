@@ -14,7 +14,7 @@ import AKiFAiRWAY from "@/../public/AKiFAiRWAY.png"
 export const MainDBEng = [
   {
     myImg:myImg,
-    mainComment:"This is Main comment",
+    mainComment:`I was working as an engineer in the Semiconductor industry for 13 years in Japan. And my expertise are suggesting other employees efficiency and removing unproductive processes. \n\nI started learning web development in 2024. I can use React, NextJS, NodeJS, Postgres SQL and mongoDB. So I can work as a full stack engineer.\n\nI keep continuing to learn programming, then I want to combine those skills to provide useful web applications and great websites for my clients.\n\nPlease contact me if you have any interest in me.`,
     project:[
       {
         projectName:"AKiF AiRWAY",
