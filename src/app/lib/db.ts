@@ -34,7 +34,7 @@ export const MainDBEng = [
         explain:"This is my school project. I created this with NextJS.",
         url:"https://",
         githubUrl:"",
-        skillImg:["pic1","pic2,,,"],
+        skillImg:[GSAP_Logo],
       },
       {
         projectName:"MovieSuggestingApp",
@@ -43,7 +43,7 @@ export const MainDBEng = [
         explain:"This is my school project. I created this webApp with NodeJS.",
         url:"https://sho8000.github.io/movie-suggestion-app/",
         githubUrl:"",
-        skillImg:["pic1","pic2,,,"],
+        skillImg:[GSAP_Logo],
       },
       {
         projectName:"Pokemon Valorant Charactor",
@@ -52,7 +52,7 @@ export const MainDBEng = [
         explain:"thisis,,,",
         url:"https://sho8000.github.io/Pokemon-Valorant/",
         githubUrl:"",
-        skillImg:["pic1","pic2,,,"],
+        skillImg:[GSAP_Logo],
       },
     ],
     workExperience:[
