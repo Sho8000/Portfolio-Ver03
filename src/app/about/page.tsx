@@ -4,6 +4,7 @@ import AboutWorkE from "../components/pages/About/AboutWorkE";
 import Footer from "../components/pages/Footer/Footer";
 import Header from "../components/pages/Header/Header";
 import Sidebar from "../components/pages/Sidebar/Sidebar";
+import { LanguageBtn } from "../components/parts/Button/Button";
 import SectionDivider from "../components/parts/SectionDivider/SectionDivider";
 import { HbgBtnContextProvider } from "../context/HbgContext";
 
@@ -12,7 +13,8 @@ export default function About() {
     <>
       <main>
         <AboutMain/>
-        <div className="text-white text-center">Add language BTN</div>
+{/*         <div className="text-white text-center">Add language BTN</div> */}
+        <LanguageBtn/>
         <SectionDivider sectionName="Project"/>
         <AboutProject/>
         <SectionDivider sectionName="Work Experience"/>

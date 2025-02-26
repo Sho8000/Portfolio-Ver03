@@ -55,7 +55,6 @@ export const MainPageBtn = ({btnType}:BtnType) => {
   );
 };
 
-
 export const Btn = ({btnType}:BtnType) => {
   const {closeSide,setLinkTo} = useHbgBtnContext();
   const changeUnderbarSize = gsap.timeline()
@@ -103,6 +102,33 @@ export const BtnWithCircle = ({btnWithCircleType}:BtnWithCircleType) => {
 
   );
 };
+
+export const LanguageBtn = () => {
+  /* 
+  const {switchAnimation,setLink} = useHomeAnimeBtnContext();
+  const changeUnderbarSize = gsap.timeline()
+
+  const btnClickHandler = (link:string,text:string) => {
+    setLink(link)
+    changeUnderbarSize
+      .to(`.under_${text.replace(/\s/g, "")}`,{scaleY:0.1,duration:0.5,transformOrigin:"top"})
+      .then(()=>{
+        switchAnimation();
+      })
+  }
+ */
+  return (
+    <>
+      <div>
+        <button className={`flex flex-col items-center m-auto pb-5 ${Style.buttonBorder}`}>
+          <p className="text-white">Japanese</p>
+          <div className={`bg-white w-[100%] h-4`}></div>
+        </button>
+      </div>
+    </>
+  );
+};
+
 
 
 

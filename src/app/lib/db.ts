@@ -10,6 +10,8 @@ import HoribaImg from "@/../public/Horiba.png"
 import NorsatImg from "@/../public/Norsat.png"
 import CommingSoonImg from "@/../public/commingSoon.png"
 import AKiFAiRWAY from "@/../public/AKiFAiRWAY.png"
+import GSAP_Logo from "@/../public/GSAP_Logo_90_90.png"
+import JQuery_Logo from "@/../public/JQuery_Logo_90_90.png"
 
 export const MainDBEng = [
   {
@@ -20,24 +22,27 @@ export const MainDBEng = [
         projectName:"AKiF AiRWAY",
         imgUrl:AKiFAiRWAY,
         type:"Client's Project",
-        explain:"thisis,,,",
+        explain:"This is my first client's website. I created this website based on my designer's Mockup. I created this website with OOP, and I used GSAP for the animation. My client was very satisfied with this website.",
         url:"https://akifairway-englishsite.netlify.app/",
-        skillImg:["pic1","pic2,,,"],
+        githubUrl:"https://github.com/Sho8000/Client-s-Detox-English-Conversation-EnglishVersion",
+        skillImg:[GSAP_Logo,JQuery_Logo],
       },
       {
         projectName:"SparkCard",
         imgUrl:SparkImg,
         type:"Personal Project",
-        explain:"thisis,,,",
+        explain:"This is my school project. I created this with NextJS.",
         url:"https://",
+        githubUrl:"",
         skillImg:["pic1","pic2,,,"],
       },
       {
         projectName:"MovieSuggestingApp",
         imgUrl:MovieImg,
         type:"Personal Project",
-        explain:"thisis,,,",
+        explain:"This is my school project. I created this webApp with NodeJS.",
         url:"https://sho8000.github.io/movie-suggestion-app/",
+        githubUrl:"",
         skillImg:["pic1","pic2,,,"],
       },
       {
@@ -46,6 +51,7 @@ export const MainDBEng = [
         type:"Personal Project",
         explain:"thisis,,,",
         url:"https://sho8000.github.io/Pokemon-Valorant/",
+        githubUrl:"",
         skillImg:["pic1","pic2,,,"],
       },
     ],
