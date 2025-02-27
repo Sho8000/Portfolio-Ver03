@@ -40,7 +40,7 @@ export default function LandingPage() {
     },[isLandingUnderbarDone])
   
   return (
-    <section className={`w-[100vw] h-[100vh] overflow-hidden relative`}>
+    <section className={`w-[100%] h-[100vh] overflow-hidden relative`}>
       <div className="relative w-[450px] h-[300px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] deleteCircle">
           <CircleProgressBar/>

@@ -12,7 +12,7 @@ export default function AboutProject() {
   }
 
   return (
-    <section id="project" className="w-[100vw] min-h-[100vh] overflow-x-hidden">
+    <section id="project" className="w-[100%] min-h-[100vh] overflow-x-hidden">
       <div className="mb-4 bg-blue-900/60 border-t-2 border-l-2 border-r-2 border-gray-200/60">
         {aboutData.project.map((item,index)=>{
           return <div key={index}>
@@ -40,7 +40,7 @@ export default function AboutProject() {
                 }
                 </div>
                 <p className="w-[80%] m-auto text-white">{item.explain}</p>
-                <div className="w-[80%] m-auto flex justify-between items-center mt-3 grow">
+                <div className="w-[80%] m-auto flex justify-between items-center flex-wrap mt-3 mb-3">
                   <p className="text-white text-center">GitHub : <a href={item.githubUrl}><span className="font-bold underline">Here</span></a></p>
                   <p className="text-white">date : {item.createdDate}</p>
                 </div>

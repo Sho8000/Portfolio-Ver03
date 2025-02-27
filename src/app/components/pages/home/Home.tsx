@@ -39,8 +39,8 @@ export default function HomeMain() {
       
   return (
     <>
-      <section className="w-[100vw] min-h-[80vh] overflow-x-hidden">
-        <div className="w-[100vw] min-h-[400px] h-[80vh] relative">
+      <section className="w-[100%] min-h-[80vh] overflow-x-hidden">
+        <div className="w-[100%] min-h-[400px] h-[80vh] relative">
           <div>
             <h2 className="text-white text-3xl font-bold pt-4 pl-4 homeAnimation scale-y-0">Sho Yoshimura</h2>
           </div>

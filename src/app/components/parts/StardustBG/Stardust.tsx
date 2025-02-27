@@ -88,7 +88,7 @@ const Stardust: React.FC = () => {
     }
   },[])
   
-  return <canvas ref={canvasRef} className='w-[100vw] h-[100vh] fixed top-0 left-0 -z-10'/>;
+  return <canvas ref={canvasRef} className='w-[100vw] h-[100vh] fixed top-0 left-0 -z-10 '/>;
 };
 
 export default Stardust;
