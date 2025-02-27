@@ -16,7 +16,7 @@ export default function AboutProject() {
       <div className="mb-4 bg-blue-900/60 border-t-2 border-l-2 border-r-2 border-gray-200/60">
         {aboutData.project.map((item,index)=>{
           return <div key={index}>
-            <div className="flex items-center border-b-2 border-gray-200/60">
+            <div className="flex items-strech border-b-2 border-gray-200/60">
               <div className="basis-1/2 border-r-2 border-gray-200/60">
                 <Image
                   className="m-auto p-4"
@@ -40,7 +40,10 @@ export default function AboutProject() {
                 }
                 </div>
                 <p className="w-[80%] m-auto text-white">{item.explain}</p>
-                <p className="text-white text-center mt-2">GitHub : <a href={item.githubUrl}><span className="font-bold underline">Here</span></a></p>
+                <div className="w-[80%] m-auto flex justify-between items-center mt-3 grow">
+                  <p className="text-white text-center">GitHub : <a href={item.githubUrl}><span className="font-bold underline">Here</span></a></p>
+                  <p className="text-white">date : {item.createdDate}</p>
+                </div>
               </div>
             </div>
 

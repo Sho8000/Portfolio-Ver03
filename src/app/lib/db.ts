@@ -26,33 +26,37 @@ export const MainDBEng = [
         url:"https://akifairway-englishsite.netlify.app/",
         githubUrl:"https://github.com/Sho8000/Client-s-Detox-English-Conversation-EnglishVersion",
         skillImg:[GSAP_Logo,JQuery_Logo],
+        createdDate:"9th September, 2024"
       },
       {
         projectName:"SparkCard",
         imgUrl:SparkImg,
         type:"Personal Project",
-        explain:"This is my school project. I created this with NextJS.",
+        explain:"This is my first project that I used NextJS. This was a good training to think about how to create reusable components. This is from school project, so it doesn't have button action except email sending part.",
         url:"https://",
         githubUrl:"",
         skillImg:[GSAP_Logo],
+        createdDate:"9th Febrary, 2025"
       },
       {
         projectName:"MovieSuggestingApp",
         imgUrl:MovieImg,
         type:"Personal Project",
-        explain:"This is my school project. I created this webApp with NodeJS.",
+        explain:"This is my first school project that using typescript. This app can search the movie information from the API. Let's check your favorite movie!",
         url:"https://sho8000.github.io/movie-suggestion-app/",
-        githubUrl:"",
-        skillImg:[GSAP_Logo],
+        githubUrl:"https://github.com/Sho8000/movie-suggestion-app",
+        skillImg:[GSAP_Logo,JQuery_Logo],
+        createdDate:"25th October, 2024"
       },
       {
         projectName:"Pokemon Valorant Charactor",
         imgUrl:PokemonImg,
         type:"Personal Project",
-        explain:"thisis,,,",
+        explain:"I created this website to understand fetching and gsap collaboration. When I fetch some data from API, I was not sure how to decide the target class. But through this project, I could understand how those work.",
         url:"https://sho8000.github.io/Pokemon-Valorant/",
         githubUrl:"",
-        skillImg:[GSAP_Logo],
+        skillImg:[GSAP_Logo,JQuery_Logo],
+        createdDate:"9th September, 2024"
       },
     ],
     workExperience:[
