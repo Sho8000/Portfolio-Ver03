@@ -63,12 +63,12 @@ export const MainDBEng = [
       {
         companyName:"HORIBA STEC",
         companyImg:HoribaImg,
-        contents:"",
+        contents:"I worked here for 13 years. I had experiences of production, customer service, trainer, efficient engineer and team management. I was an experte of suggesting solutions for our products and producting process, so I was providing trouble shooting and efficiency to the other emproyees and our customer as an efficient Engineer.",
       },
       {
         companyName:"Norsat Intarnational",
         companyImg:NorsatImg,
-        contents:"",
+        contents:"I work here as a Production Engineer. I have knowledge of electric schematic, so I not only test the products, but also troubleshoot if there are issues with the product.",
       },
     ],
     footerInfo:[
