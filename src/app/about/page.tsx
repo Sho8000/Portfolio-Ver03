@@ -10,8 +10,6 @@ export default function About() {
     <>
       <main>
         <AboutMain/>
-{/*         <div className="text-white text-center">Add language BTN</div> */}
-        <LanguageBtn/>
         <SectionDivider sectionName="Project"/>
         <AboutProject/>
         <SectionDivider sectionName="Work Experience"/>

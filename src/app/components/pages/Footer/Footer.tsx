@@ -1,17 +1,41 @@
 "use client"
 import { MainDBEng } from "@/app/lib/db";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
+gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 /* Contact me without props */
 export default function Footer() {
+  const {isHeaderClose} = useHeaderAnimeContext();
+  const footerAnime = gsap.timeline();
+  useEffect(() => {
+    footerAnime
+      .to(".footerAnime", { scaleY: 1, duration: 0.5, stagger:0.5},1)
 
+    return () => {
+      footerAnime.kill();
+    };
+  }, []);
+
+  useEffect(()=>{
+    if(isHeaderClose){
+      footerAnime
+      .to(".footerAnime", { scaleY: 0, duration: 0.5 })
+    }
+  },[isHeaderClose])
+
+  
   const linkToContactHandler = (url:string) => {
     window.location.href = url
   }
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center m-5">
+      <div className="flex flex-col items-center justify-center m-5 footerAnime scale-y-0">
         <div className={`justify-center mt-2 text-2xl`}>
           <p className="text-2xl text-white font-bold underline">Contact Me</p>
         </div>

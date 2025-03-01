@@ -28,7 +28,10 @@ export default function Header() {
   useEffect(()=>{
     if(isHeaderClose){
       headAnimation
-      .to(".navCloseAnime", { scaleY: 0, duration: 0.5 })
+      .to(".navCloseAnime", { scaleY: 0, duration: 0.5 },1)
+      .then(()=>{
+        window.location.href = `/home`;
+      })
     }
   },[isHeaderClose])
 

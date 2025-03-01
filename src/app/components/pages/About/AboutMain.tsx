@@ -1,14 +1,39 @@
 "use client"
 import { MainDBEng } from "@/app/lib/db";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LanguageBtn } from "../../parts/Button/Button";
+import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
+gsap.registerPlugin(useGSAP,ScrollTrigger);
+
 export default function AboutMain() {
   const [aboutData,setAboutData] = useState(MainDBEng[0])
+  const {isHeaderClose} = useHeaderAnimeContext()
+  const aboutMainAnime = gsap.timeline();
+
+  useEffect(() => {
+    aboutMainAnime
+      .to(".aboutMainAnime", { scaleY: 1, duration: 0.5, stagger:0.5},0.5)
+
+    return () => {
+      aboutMainAnime.kill();
+    };
+  }, []);
+
+  useEffect(()=>{
+    if(isHeaderClose){
+      aboutMainAnime
+      .to(".aboutMainAnime", { scaleY: 0, duration: 0.5 },0.5)
+    }
+  },[isHeaderClose])
 
   return (
     <section>
       <div className="h-[80px]"></div>
-      <div className="mt-4">
+      <div className="mt-4 aboutMainAnime scale-y-0">
         <Image
           className="m-auto rounded-[50%] border-white border-2"
           src={aboutData.myImg}
@@ -17,10 +42,13 @@ export default function AboutMain() {
           height={250}
         />
       </div>
-      <div className="w-[80%] m-auto mt-4 mb-4 bg-blue-950/40 pt-6 pb-6 pr-4 pl-4 rounded-lg">
+      <div className="w-[80%] m-auto mt-4 mb-4 bg-blue-950/40 pt-6 pb-6 pr-4 pl-4 rounded-lg aboutMainAnime scale-y-0">
         {aboutData.mainComment.split('\n').map((item, index)=>{
           return <p key={index} className="text-white">{item} <br/></p>
         })}
+      </div>
+      <div className="aboutMainAnime scale-y-0">
+        <LanguageBtn/>
       </div>
     </section>
   );

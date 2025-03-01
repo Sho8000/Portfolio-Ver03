@@ -4,9 +4,33 @@ import { Reorder } from "motion/react";
 import Image from "next/image";
 import Style from "./project.module.css"
 import { MainDBEng } from "../lib/db";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+import { useHeaderAnimeContext } from "../context/HeaderAnimation";
+gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function Project() {
   const [projectList,setProjectList] = useState(MainDBEng[0].project)
+  const {isHeaderClose} = useHeaderAnimeContext();
+  const projectAnime = gsap.timeline();
+  useEffect(() => {
+    projectAnime
+      .to(".projectAnime", { scaleY: 1, duration: 0.5, stagger:0.5},0.5)
+
+    return () => {
+      projectAnime.kill();
+    };
+  }, []);
+
+  useEffect(()=>{
+    if(isHeaderClose){
+      projectAnime
+      .to(".projectAnime", { scaleY: 0, duration: 0.5 },0.5)
+    }
+  },[isHeaderClose])
+
 
   const projectLinkHandler = (url:string) => {
     window.location.href = url
@@ -14,7 +38,7 @@ export default function Project() {
 
   return (
     <>
-      <section className="w-[100vw] min-h-[100vh] overflow-x-hidden">
+      <section className="w-[100vw] min-h-[100vh] overflow-x-hidden projectAnime scale-y-0">
         <div className="h-[80px]"></div>
         <h2 className="text-white text-3xl font-bold text-center p-3">My Project (Click to See)</h2>
         <div className="w-[600px] m-auto">

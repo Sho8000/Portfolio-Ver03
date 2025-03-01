@@ -1,11 +1,34 @@
 "use client"
 import { MainDBEng } from "@/app/lib/db";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
+gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function AboutProject() {
   const [aboutData,setAboutData] = useState(MainDBEng[0])
+  const {isHeaderClose} = useHeaderAnimeContext();
+  const aboutProAnime = gsap.timeline()
 
+   useEffect(() => {
+    aboutProAnime
+      .to(".aboutProAnime", { scaleY: 1, duration: 0.5, stagger:0.5},0.5)
+  
+      return () => {
+        aboutProAnime.kill();
+      };
+    }, []);
+  
+    useEffect(()=>{
+      if(isHeaderClose){
+        aboutProAnime
+        .to(".aboutProAnime", { scaleY: 0, duration: 0.5 },0.5)
+      }
+    },[isHeaderClose])
+  
   const goToProjectPage = () => {
 //    window.location.href = `/project`
 //    add hover action
@@ -13,7 +36,7 @@ export default function AboutProject() {
 
   return (
     <section id="project" className="w-[100%] min-h-[100vh] overflow-x-hidden">
-      <div className="mb-4 bg-blue-900/60 border-t-2 border-l-2 border-r-2 border-gray-200/60">
+      <div className="mb-4 bg-blue-900/60 border-t-2 border-l-2 border-r-2 border-gray-200/60 aboutProAnime scale-y-0">
         {aboutData.project.map((item,index)=>{
           return <div key={index}>
             <div className="flex items-strech border-b-2 border-gray-200/60">
