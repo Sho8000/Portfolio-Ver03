@@ -8,7 +8,6 @@ import MovieImg from "@/../public/MovieSuggestingApp.png"
 import PokemonImg from "@/../public/PokemonImgPC.png"
 import HoribaImg from "@/../public/Horiba.png"
 import NorsatImg from "@/../public/Norsat.png"
-import CommingSoonImg from "@/../public/commingSoon.png"
 import AKiFAiRWAY from "@/../public/AKiFAiRWAY.png"
 import GSAP_Logo from "@/../public/GSAP_Logo_90_90.png"
 import JQuery_Logo from "@/../public/JQuery_Logo_90_90.png"
@@ -61,14 +60,14 @@ export const MainDBEng = [
     ],
     workExperience:[
       {
-        companyName:"HORIBA STEC",
-        companyImg:HoribaImg,
-        contents:"I worked here for 13 years. I had experiences of production, customer service, trainer, efficient engineer and team management. I was an experte of suggesting solutions for our products and producting process, so I was providing trouble shooting and efficiency to the other emproyees and our customer as an efficient Engineer.",
-      },
-      {
         companyName:"Norsat Intarnational",
         companyImg:NorsatImg,
         contents:"I work here as a Production Engineer. I have knowledge of electric schematic, so I not only test the products, but also troubleshoot if there are issues with the product.",
+      },
+      {
+        companyName:"HORIBA STEC",
+        companyImg:HoribaImg,
+        contents:"I worked here for 13 years. I had experiences of production, customer service, trainer, efficient engineer and team management. I was an experte of suggesting solutions for our products and producting process, so I was providing trouble shooting and efficiency to the other emproyees and our customer as an efficient Engineer.",
       },
     ],
     footerInfo:[

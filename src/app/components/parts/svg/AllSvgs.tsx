@@ -1,6 +1,5 @@
 "use client"
 import { useHbgBtnContext } from "@/app/context/HbgContext";
-import { useEffect } from "react";
 
 interface CircleProps {
   radius:number;

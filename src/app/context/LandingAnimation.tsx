@@ -1,5 +1,5 @@
 "use client"
-import { createContext, RefObject, useContext, useRef, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 type LandingAnimeState = {
   isLandingUnderbarDone:boolean;

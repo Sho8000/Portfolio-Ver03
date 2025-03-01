@@ -9,7 +9,7 @@ const CircleProgressBar = () => {
   const dashOffset = dashArray - (dashArray * count) / 100
 
   useEffect(() => {
-    let start = Date.now();
+    const start = Date.now();
     const interval = setInterval(() => {
       const elapsed = Date.now() - start;
       const newCount = Math.min(100, Math.floor((elapsed / 1000) * 100));

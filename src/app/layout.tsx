@@ -6,6 +6,8 @@ import { HbgBtnContextProvider } from "./context/HbgContext";
 import { SideAnimeContextProvider } from "./context/SidebarAnimation";
 import { LandingAnimeContextProvider } from "./context/LandingAnimation";
 import { HomeAnimeContextProvider } from "./context/HomeAnime";
+import { AboutAnimeContextProvider } from "./context/AboutAnimation";
+import { HeaderAnimeContextProvider } from "./context/HeaderAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +39,11 @@ export default function RootLayout({
           <HbgBtnContextProvider>
             <LandingAnimeContextProvider>
               <SideAnimeContextProvider>
-                {children}
+                <HeaderAnimeContextProvider>
+                  <AboutAnimeContextProvider>
+                    {children}
+                  </AboutAnimeContextProvider>
+                </HeaderAnimeContextProvider>
               </SideAnimeContextProvider>
             </LandingAnimeContextProvider>
           </HbgBtnContextProvider>
