@@ -7,8 +7,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import Footer from "../Footer/Footer";
-import { useHbgBtnContext } from "@/app/context/HbgContext";
 import { useHomeAnimeBtnContext } from "@/app/context/HomeAnime";
+import Style from "./Home.module.css"
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function HomeMain() {
@@ -39,8 +39,8 @@ export default function HomeMain() {
       
   return (
     <>
-      <section className="w-[100%] min-h-[80vh] overflow-x-hidden">
-        <div className="w-[100%] min-h-[400px] h-[80vh] relative">
+      <section className={`w-[100%] min-h-[80vh] overflow-x-hidden`}>
+        <div className={`w-[100%] min-h-[400px] h-[auto] relative ${Style.homeContainerResponsive}`}>
           <div>
             <h2 className="text-white text-3xl font-bold pt-4 pl-4 homeAnimation scale-y-0">Sho Yoshimura</h2>
           </div>
@@ -58,21 +58,21 @@ export default function HomeMain() {
               <MainPageBtn btnType={{text:"Project Links", moveTo:"project"}}/>
             </div>
           </div>
-          <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] homeAnimation scale-y-0">
+          <div className={`absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] homeAnimation scale-y-0 mt-10 ${Style.homeResponsive}`}>
             <Image
               src={MyPicture}
               alt="MyPicture"
               height={250}
               width={250}
               priority
-              style={{border:"4px solid white", borderRadius:"50%"}}
+              style={{minWidth:"250px", border:"4px solid white", borderRadius:"50%", margin:"auto"}}
             />
           </div>
         </div>
+        <div className="homeAnimation scale-y-0">
+          <Footer/>
+        </div>
       </section>
-      <div className="homeAnimation scale-y-0">
-        <Footer/>
-      </div>
     </>
   );
 }
