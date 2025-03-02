@@ -53,13 +53,15 @@ export default function AboutProject() {
               <div className="h-auto basis-1/2">
                 <div className="flex justify-center">
                 {item.skillImg.map((skill,index)=>
-                  <Image
-                    key={index}
-                    src={skill}
-                    alt="skillPic"
-                    width={90}
-                    height={90}
-                  />)
+                  <div key={index}>
+                    <Image
+                      src={skill}
+                      alt="skillPic"
+                      width={90}
+                      height={90}
+                    />
+                    <p className="text-white text-lg font-bold text-center pb-2">{item.skillName[index]}</p>
+                  </div>)
                 }
                 </div>
                 <p className="w-[80%] m-auto text-white">{item.explain}</p>

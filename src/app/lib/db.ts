@@ -18,33 +18,36 @@ export const MainDBEng = [
     mainComment:`I was working as an engineer in the Semiconductor industry for 13 years in Japan. And my expertise are suggesting other employees efficiency and removing unproductive processes. \n\nI started learning web development in 2024. I can use React, NextJS, NodeJS, Postgres SQL and mongoDB. So I can work as a full stack engineer.\n\nI keep continuing to learn programming, then I want to combine those skills to provide useful web applications and great websites for my clients.\n\nPlease contact me if you have any interest in me.`,
     project:[
       {
-        projectName:"AKiF AiRWAY",
-        imgUrl:AKiFAiRWAY,
-        type:"Client's Project",
-        explain:"This is my first client's website. I created this website based on my designer's Mockup. I created this website with OOP, and I used GSAP for the animation. My client was very satisfied with this website.",
-        url:"https://akifairway-englishsite.netlify.app/",
-        githubUrl:"https://github.com/Sho8000/Client-s-Detox-English-Conversation-EnglishVersion",
-        skillImg:[GSAP_Logo,JQuery_Logo],
-        createdDate:"9th September, 2024"
-      },
-      {
         projectName:"SparkCard",
         imgUrl:SparkImg,
         type:"Personal Project",
-        explain:"This is my first project that I used NextJS. This was a good training to think about how to create reusable components. This is from school project, so it doesn't have button action except email sending part.",
+        explain:"This is my first project I used NextJS. This was a good training to think about how to create reusable components. This is from a school project, so it doesn't have any button actions except to send email.",
         url:"https://",
         githubUrl:"",
         skillImg:[GSAP_Logo],
+        skillName:["GSAP"],
         createdDate:"9th Febrary, 2025"
+      },
+      {
+        projectName:"AKiF AiRWAY",
+        imgUrl:AKiFAiRWAY,
+        type:"Client's Project",
+        explain:"This is my first client's website. I created this website based on my designer's Mockup. I used OOP for it and GSAP for the animation. My client was very satisfied with my work.",
+        url:"https://akifairway-englishsite.netlify.app/",
+        githubUrl:"https://github.com/Sho8000/Client-s-Detox-English-Conversation-EnglishVersion",
+        skillImg:[GSAP_Logo,JQuery_Logo],
+        skillName:["GSAP","JQuery"],
+        createdDate:"9th September, 2024"
       },
       {
         projectName:"MovieSuggestingApp",
         imgUrl:MovieImg,
         type:"Personal Project",
-        explain:"This is my first school project that using typescript. This app can search the movie information from the API. Let's check your favorite movie!",
+        explain:"This is my first school project using typescript. This app can search information for movies from the API. Let's check your favorite movies!",
         url:"https://sho8000.github.io/movie-suggestion-app/",
         githubUrl:"https://github.com/Sho8000/movie-suggestion-app",
         skillImg:[GSAP_Logo,JQuery_Logo],
+        skillName:["GSAP","JQuery"],
         createdDate:"25th October, 2024"
       },
       {
@@ -55,6 +58,7 @@ export const MainDBEng = [
         url:"https://sho8000.github.io/Pokemon-Valorant/",
         githubUrl:"",
         skillImg:[GSAP_Logo,JQuery_Logo],
+        skillName:["GSAP","JQuery"],
         createdDate:"9th September, 2024"
       },
     ],
@@ -62,12 +66,16 @@ export const MainDBEng = [
       {
         companyName:"Norsat Intarnational",
         companyImg:NorsatImg,
-        contents:"I work here as a Production Engineer. I have knowledge of electric schematic, so I not only test the products, but also troubleshoot if there are issues with the product.",
+        contents:"I work for this company as a Production Engineer. I have knowledge of electric schematic, so I not only test the products, but also troubleshoot if there are issues with the products.",
+        dateStarted:"Febraly, 2024",
+        dateEnded:""
       },
       {
         companyName:"HORIBA STEC",
         companyImg:HoribaImg,
-        contents:"I worked here for 13 years. I had experiences of production, customer service, trainer, efficient engineer and team management. I was an experte of suggesting solutions for our products and producting process, so I was providing trouble shooting and efficiency to the other emproyees and our customer as an efficient Engineer.",
+        contents:"I worked for this company for 13 years. I had experiences in production, customer service, trainer for emproyees and clients, efficient engineer and team management. I was an expert for suggesting solutions for our products and their process, so I was providing trouble shooting and efficiency to the other emproyees and our customer as an experienced engineer.",
+        dateStarted:"April, 2010",
+        dateEnded:"June, 2023"
       },
     ],
     footerInfo:[
