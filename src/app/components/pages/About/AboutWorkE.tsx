@@ -1,13 +1,13 @@
 "use client"
 import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
-import { MainDBEng } from "@/app/lib/db";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslateContext } from "@/app/context/Translate";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
+import Style from "./About.module.css"
 
 export default function AboutWorkE() {
   const {data} =useTranslateContext();
@@ -40,12 +40,12 @@ export default function AboutWorkE() {
       <div className="mb-4 bg-blue-900/60 border-t-2 border-l-2 border-r-2 border-gray-200/60 aboutWorkAnime scale-y-0">
         {aboutData.workExperience.map((item,index)=>{
           return <div key={index}>
-            <div className="flex items-strech border-b-2 border-gray-200/60">
+            <div className={`flex items-strech border-b-2 border-gray-200/60 ${Style.workContainer}`}>
               <div className="h-auto basis-1/2 pb-4">
                 <h2 className="w-[80%] m-auto text-white text-center pt-3 pb-3 font-bold text-2xl">{item.companyName}</h2>
                 <p className="w-[80%] m-auto text-white">{item.contents}</p>
               </div>
-              <div className="basis-1/2 border-l-2 border-gray-200/60">
+              <div className={`basis-1/2 border-l-2 border-gray-200/60 ${Style.workImgContainer}`}>
                 <Image
                   className="m-auto p-4"
                   src={item.companyImg}

@@ -1,12 +1,12 @@
 "use client"
-import { MainDBEng } from "@/app/lib/db";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
 import { useTranslateContext } from "@/app/context/Translate";
+import Style from "./About.module.css"
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function AboutProject() {
@@ -42,8 +42,8 @@ export default function AboutProject() {
       <div className="mb-4 bg-blue-900/60 border-t-2 border-l-2 border-r-2 border-gray-200/60 aboutProAnime scale-y-0">
         {aboutData.project.map((item,index)=>{
           return <div key={index}>
-            <div className="flex items-strech border-b-2 border-gray-200/60">
-              <div className="basis-1/2 border-r-2 border-gray-200/60">
+            <div className={`flex items-strech border-b-2 border-gray-200/60 ${Style.projectContainer}`}>
+              <div className={`basis-1/2 border-r-2 border-gray-200/60 ${Style.imgContainer}`}>
                 <Image
                   className="m-auto p-4"
                   src={item.imgUrl}

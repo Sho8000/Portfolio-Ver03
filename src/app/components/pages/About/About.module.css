@@ -1,0 +1,15 @@
+@media only screen and (max-width:768px){
+  .projectContainer{
+    flex-direction: column;
+  }
+  .imgContainer{
+    border-right: none;
+    border-bottom: 2px dotted rgba(177, 177, 177, 0.6);
+  }
+  .workContainer{
+    flex-direction: column;
+  }
+  .workImgContainer{
+    border-left: none;
+  }
+}
