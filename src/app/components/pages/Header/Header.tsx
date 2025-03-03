@@ -44,7 +44,7 @@ export default function Header() {
       <nav className={`fixed w-[100%] h-[80px] border-b-2 border-gray-400 p-4 z-10 ${Style.headBG}`}>
         <div className="flex justify-between items-center navCloseAnime scale-y-0">
           <button onClick={goToHome}>
-            <h2 className="text-white text-4xl font-bold">Sho Yoshimura</h2>
+            <h2 className={`text-white text-4xl font-bold ${Style.myName}`}>Sho Yoshimura</h2>
           </button>
           <HbgMenu/>
         </div>
