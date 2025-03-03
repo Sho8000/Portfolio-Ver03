@@ -38,10 +38,10 @@ export default function Project() {
 
   return (
     <>
-      <section className="w-[100vw] min-h-[100vh] overflow-x-hidden projectAnime scale-y-0">
+      <section className="w-[100vw] min-h-[80vh] overflow-x-hidden projectAnime scale-y-0">
         <div className="h-[80px]"></div>
-        <h2 className="text-white text-3xl font-bold text-center p-3">My Project (Click to See)</h2>
-        <div className="w-[600px] m-auto">
+        <h2 className={`text-white text-3xl font-bold text-center p-3 ${Style.projectMainTitle}`}>My Project (Click to See)</h2>
+        <div className={`w-[600px] m-auto ${Style.projectContainer}`}>
           <Reorder.Group values={projectList} axis='y' onReorder={setProjectList} className='draggable-container'>
             {projectList.map((item,index)=>(
               index===0?(
@@ -52,7 +52,7 @@ export default function Project() {
   /*                   whileDrag={{backgroundColor:'#f0a'}} */
                     className='draggable-item'
                   >
-                    <div className="flex justify-center items-center w-[100%] h-[300px] bg-white m-auto overflow-hidden border-2 border-white rounded-lg relative" onClick={()=>{projectLinkHandler(item.url)}}>
+                    <div className={`flex justify-center items-center w-[100%] h-[300px] bg-white m-auto overflow-hidden border-2 border-white rounded-lg relative ${Style.firstProjectImgArea}`} onClick={()=>{projectLinkHandler(item.url)}}>
                       <Image
                         src={item.imgUrl}
                         alt={item.projectName}
@@ -73,10 +73,10 @@ export default function Project() {
                 className='draggable-item'
               >
                 <div className="flex">
-                  <div className="flex justify-around w-[60%] h-auto bg-white m-auto mt-3 rounded-md">
-                    <p className="text-center">↑ Drag</p>
-                    <span className="text-base font-bold"> {item.projectName} </span>
-                    <p>Drag ↑</p>
+                  <div className={`flex justify-around items-center w-[60%] h-auto bg-white m-auto mt-3 rounded-md ${Style.projectItemsContainer}`}>
+                    <p className={`text-center ${Style.Drag}`}>↑ Drag</p>
+                    <span className={`text-base font-bold ${Style.itemsTitle}`}> {item.projectName} </span>
+                    <p className={`text-center ${Style.Drag}`}>Drag ↑</p>
                   </div>
                 </div>
               </Reorder.Item>

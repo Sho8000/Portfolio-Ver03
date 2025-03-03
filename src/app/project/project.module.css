@@ -1,3 +1,42 @@
 .projectTitle{
   text-shadow: 3px 3px 3px black, -3px -3px 3px black, -3px 3px 3px black, 3px -3px 3px black, 3px 0px 3px black, -3px 0px 3px black, 0px 3px 3px black, 0px -3px 3px black;
 }
+
+@media only screen and (max-width:768px){
+  .projectContainer{
+    width: 400px;
+  }
+  .firstProjectImgArea{
+    height: 200px;
+  }
+  .projectTitle{
+    font-size: 20px;
+  }
+  .projectItemsContainer{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width:426px){
+  .projectMainTitle{
+    font-size: 24px;
+  }
+  .projectContainer{
+    width: 300px;
+  }
+  .firstProjectImgArea{
+    height: 150px;
+  }
+  .projectTitle{
+    font-size: 16px;
+  }
+  .projectItemsContainer{
+    width: 90%;
+  }
+  .itemsTitle{
+    font-size: 12px;
+  }
+  .Drag{
+    font-size: 12px;
+  }
+}
