@@ -7,6 +7,7 @@ import { SideAnimeContextProvider } from "./context/SidebarAnimation";
 import { LandingAnimeContextProvider } from "./context/LandingAnimation";
 import { HomeAnimeContextProvider } from "./context/HomeAnime";
 import { HeaderAnimeContextProvider } from "./context/HeaderAnimation";
+import { TranslateContextProvider } from "./context/Translate";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,15 +36,17 @@ export default function RootLayout({
       >
         <Stardust/>
         <HomeAnimeContextProvider>
-          <HbgBtnContextProvider>
-            <LandingAnimeContextProvider>
-              <SideAnimeContextProvider>
-                <HeaderAnimeContextProvider>
-                  {children}
-                </HeaderAnimeContextProvider>
-              </SideAnimeContextProvider>
-            </LandingAnimeContextProvider>
-          </HbgBtnContextProvider>
+          <TranslateContextProvider>
+            <HbgBtnContextProvider>
+              <LandingAnimeContextProvider>
+                <SideAnimeContextProvider>
+                  <HeaderAnimeContextProvider>
+                    {children}
+                  </HeaderAnimeContextProvider>
+                </SideAnimeContextProvider>
+              </LandingAnimeContextProvider>
+            </HbgBtnContextProvider>
+          </TranslateContextProvider>
         </HomeAnimeContextProvider>
       </body>
     </html>

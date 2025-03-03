@@ -6,10 +6,13 @@ import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslateContext } from "@/app/context/Translate";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function AboutWorkE() {
-  const [aboutData,setAboutData] = useState(MainDBEng[0])
+  const {data} =useTranslateContext();
+  const aboutData = data[0]
+
   const {isHeaderClose} = useHeaderAnimeContext();
   const aboutWorkAnime = gsap.timeline()
 
@@ -38,7 +41,7 @@ export default function AboutWorkE() {
         {aboutData.workExperience.map((item,index)=>{
           return <div key={index}>
             <div className="flex items-strech border-b-2 border-gray-200/60">
-              <div className="h-auto basis-1/2">
+              <div className="h-auto basis-1/2 pb-4">
                 <h2 className="w-[80%] m-auto text-white text-center pt-3 pb-3 font-bold text-2xl">{item.companyName}</h2>
                 <p className="w-[80%] m-auto text-white">{item.contents}</p>
               </div>

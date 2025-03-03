@@ -6,10 +6,13 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
+import { useTranslateContext } from "@/app/context/Translate";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function AboutProject() {
-  const [aboutData,setAboutData] = useState(MainDBEng[0])
+  const {data} =useTranslateContext();
+  const aboutData = data[0]
+
   const {isHeaderClose} = useHeaderAnimeContext();
   const aboutProAnime = gsap.timeline()
 

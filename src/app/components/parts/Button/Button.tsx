@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLandingAnimeContext } from "@/app/context/LandingAnimation";
 import { useHomeAnimeBtnContext } from "@/app/context/HomeAnime";
+import { useTranslateContext } from "@/app/context/Translate";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 interface BtnProps {
@@ -104,24 +105,17 @@ export const BtnWithCircle = ({btnWithCircleType}:BtnWithCircleType) => {
 };
 
 export const LanguageBtn = () => {
-  /* 
-  const {switchAnimation,setLink} = useHomeAnimeBtnContext();
-  const changeUnderbarSize = gsap.timeline()
-
-  const btnClickHandler = (link:string,text:string) => {
-    setLink(link)
-    changeUnderbarSize
-      .to(`.under_${text.replace(/\s/g, "")}`,{scaleY:0.1,duration:0.5,transformOrigin:"top"})
-      .then(()=>{
-        switchAnimation();
-      })
+  const {data,changeLanguage} = useTranslateContext();
+  const aboutData = data[0];
+  const languageBtnHandler = () => {
+    changeLanguage();
   }
- */
+
   return (
     <>
       <div>
-        <button className={`flex flex-col items-center m-auto pb-5 ${Style.buttonBorder}`}>
-          <p className="text-white">Japanese</p>
+        <button className={`flex flex-col items-center m-auto pb-5 ${Style.buttonBorder}`} onClick={languageBtnHandler}>
+          <p className="text-white">{aboutData.language}</p>
           <div className={`bg-white w-[100%] h-4`}></div>
         </button>
       </div>
