@@ -11,6 +11,7 @@ import NorsatImg from "@/../public/Norsat.png"
 import AKiFAiRWAY from "@/../public/AKiFAiRWAY.png"
 import GSAP_Logo from "@/../public/GSAP_Logo_90_90.png"
 import JQuery_Logo from "@/../public/JQuery_Logo_90_90.png"
+import NextJS_Logo from "@/../public/NextJS_Logo_90_90.png"
 
 export const MainDBEng = [
   {
@@ -25,8 +26,8 @@ export const MainDBEng = [
         explain:"This is my first project I used NextJS. This was a good training to think about how to create reusable components. This is from a school project, so it doesn't have any button actions except to send email.",
         url:"https://",
         githubUrl:"",
-        skillImg:[GSAP_Logo],
-        skillName:["GSAP"],
+        skillImg:[NextJS_Logo,GSAP_Logo],
+        skillName:["NextJS","GSAP"],
         createdDate:"9th Febrary, 2025"
       },
       {
@@ -117,8 +118,8 @@ export const MainDBJap = [
         explain:" NextJSを使用した私の最初のプロジェクトです。 これはスクールプロジェクトですが、本プロジェクトを通して、学校で学んだReuseableコンポーネントの練習をしました。こちらのプロジェクトは練習用のWebページとなり、Email送信ボタンを除き、すべてのボタンに機能はついていません。",
         url:"https://",
         githubUrl:"",
-        skillImg:[GSAP_Logo],
-        skillName:["GSAP"],
+        skillImg:[NextJS_Logo,GSAP_Logo],
+        skillName:["NextJS","GSAP"],
         createdDate:"9th Febrary, 2025"
       },
       {
