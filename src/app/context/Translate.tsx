@@ -49,8 +49,11 @@ const TranslateContextProvider: React.FC<{children: React.ReactNode}> = ({childr
   const [data,setData] = useState(MainDBEng)
 
   const changeLanguage = () => {
-    data == MainDBEng ?
-      setData(MainDBJap):setData(MainDBEng)
+    if(data === MainDBEng){
+      setData(MainDBJap)
+    } else {
+      setData(MainDBEng)
+    }
   }
 
   const value = {data,changeLanguage}
