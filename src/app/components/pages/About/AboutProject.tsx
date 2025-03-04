@@ -17,12 +17,19 @@ export default function AboutProject() {
   const aboutProAnime = gsap.timeline()
 
    useEffect(() => {
-    aboutProAnime
-      .to(".aboutProAnime", { scaleY: 1, duration: 0.5, stagger:0.5},0.5)
-  
-      return () => {
-        aboutProAnime.kill();
-      };
+    gsap.set(".aboutProAnime", {
+      transformOrigin: "top"
+    });
+    gsap
+      .to(".aboutProAnime", {
+        scaleY: 1,
+        duration: 0.5,
+        scrollTrigger:{
+          trigger:".aboutProAnime",
+          start:"center center",
+          toggleActions: "play none none none",
+          markers: true
+      }})
     }, []);
   
     useEffect(()=>{

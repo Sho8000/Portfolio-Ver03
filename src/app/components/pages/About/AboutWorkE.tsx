@@ -17,12 +17,19 @@ export default function AboutWorkE() {
   const aboutWorkAnime = gsap.timeline()
 
   useEffect(() => {
-    aboutWorkAnime
-    .to(".aboutWorkAnime", { scaleY: 1, duration: 0.5, stagger:0.5},0.5)
-
-    return () => {
-      aboutWorkAnime.kill();
-    };
+    gsap.set(".aboutWorkAnime", {
+      transformOrigin: "top"
+    });
+    gsap
+      .to(".aboutWorkAnime", {
+        scaleY: 1,
+        duration: 0.5,
+        scrollTrigger:{
+          trigger:".aboutWorkAnime",
+          start:"center center",
+          toggleActions: "play none none none",
+          markers: true
+    }})
   }, []);
   
   useEffect(()=>{

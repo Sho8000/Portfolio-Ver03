@@ -10,9 +10,9 @@ export default function About() {
     <>
       <main>
         <AboutMain/>
-        <SectionDivider sectionName="Project"/>
+        <SectionDivider sectionName="Project" index={1}/>
         <AboutProject/>
-        <SectionDivider sectionName="Work Experience"/>
+        <SectionDivider sectionName="Work Experience" index={2}/>
         <AboutWorkE/>
       </main>
     </>
