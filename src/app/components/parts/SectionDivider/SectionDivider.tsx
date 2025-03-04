@@ -25,7 +25,6 @@ const SectionDivider = ({sectionName,index}:SectionDivProp) => {
           trigger:`.sectionDivider-${index}`,
           start:"center center",
           toggleActions: "play none none none",
-          markers: true
     }})
   }, [index]);
 

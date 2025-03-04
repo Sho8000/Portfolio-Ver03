@@ -28,7 +28,6 @@ export default function AboutWorkE() {
           trigger:".aboutWorkAnime",
           start:"center center",
           toggleActions: "play none none none",
-          markers: true
     }})
   }, []);
   

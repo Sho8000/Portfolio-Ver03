@@ -28,7 +28,6 @@ export default function AboutProject() {
           trigger:".aboutProAnime",
           start:"center center",
           toggleActions: "play none none none",
-          markers: true
       }})
     }, []);
   
