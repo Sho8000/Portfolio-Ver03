@@ -50,14 +50,15 @@ export default function AboutProject() {
           return <div key={index}>
             <div className={`flex items-strech border-b-2 border-gray-200/60 ${Style.projectContainer}`}>
               <div className={`basis-1/2 border-r-2 border-gray-200/60 ${Style.imgContainer}`}>
-                <Image
-                  className="m-auto p-4"
-                  src={item.imgUrl}
-                  alt={item.projectName}
-                  width={400}
-                  height={250}
-                  onClick={goToProjectPage}
-                />
+                <div className="hover:scale-105 cursor-pointer" onClick={goToProjectPage}>
+                  <Image
+                    className="m-auto p-4"
+                    src={item.imgUrl}
+                    alt={item.projectName}
+                    width={400}
+                    height={250}
+                  />
+                </div>
               </div>
               <div className="h-auto basis-1/2">
                 <div className="flex justify-center">
