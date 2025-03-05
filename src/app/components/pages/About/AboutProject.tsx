@@ -75,7 +75,7 @@ export default function AboutProject() {
                 </div>
                 <p className="w-[80%] m-auto text-white">{item.explain}</p>
                 <div className="w-[80%] m-auto flex justify-between items-center flex-wrap mt-3 mb-3">
-                  <p className="text-white text-center">GitHub : <a href={item.githubUrl}><span className="font-bold underline">Here</span></a></p>
+                  <p className="text-white text-center"><a href={item.githubUrl}><span className="font-bold underline">GitHub</span></a></p>
                   <p className="text-white">date : {item.createdDate}</p>
                 </div>
               </div>
