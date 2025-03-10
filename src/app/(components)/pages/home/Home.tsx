@@ -17,7 +17,7 @@ export default function HomeMain() {
 
   useEffect(() => {
     homeAnimation
-      .to(".homeAnimation",{scaleY:1,duration:0.5,stagger:0.5})
+      .to(".homeAnimation",{scaleY:1,duration:0.5,stagger:0.3})
     return () => {
       homeAnimation.kill();
     };
@@ -51,9 +51,9 @@ export default function HomeMain() {
             <div className="homeAnimation scale-y-0">
               <MainPageBtn btnType={{text:"Work Experience", moveTo:"about/#work"}}/>
             </div>
-{/*             <div className="homeAnimation scale-y-0">
+            <div className="homeAnimation scale-y-0">
               <MainPageBtn btnType={{text:"Projects", moveTo:"about/#project"}}/>
-            </div> */}
+            </div>
             <div className="homeAnimation scale-y-0">
               <MainPageBtn btnType={{text:"Project Links", moveTo:"project"}}/>
             </div>

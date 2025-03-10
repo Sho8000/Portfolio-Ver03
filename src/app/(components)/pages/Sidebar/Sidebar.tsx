@@ -21,7 +21,7 @@ export default function Sidebar() {
   useEffect(() => {
     sidebarAnimation
       .to(".sidebarHandler", { x: 0, duration: 0.5, transformOrigin: "right" })
-      .to(".itemAnimation",{scaleY:1,stagger:0.5})
+      .to(".itemAnimation",{scaleY:1,stagger:0.3})
       .reversed(true); // Start in a reversed state (hidden)
 
     return () => {
@@ -65,14 +65,14 @@ export default function Sidebar() {
               <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"Work Experience", moveTo:"about/#work"}}/>
               </div>
-{/*               <div className="itemAnimation scale-y-0">
+              <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"Project", moveTo:"about/#project"}}/>
-              </div> */}
+              </div>
               <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"Project Links", moveTo:"project"}}/>
               </div>
               <div className="itemAnimation scale-y-0">
-                <Btn btnType={{text:"Contact", moveTo:""}}/>
+                <Btn btnType={{text:"Contact", moveTo:"home"}}/>
               </div>
             </div>
           </div>

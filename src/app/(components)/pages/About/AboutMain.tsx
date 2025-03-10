@@ -18,7 +18,7 @@ export default function AboutMain() {
 
   useEffect(() => {
     aboutMainAnime
-      .to(".aboutMainAnime", { scaleY: 1, duration: 0.5, stagger:0.5},0.5)
+      .to(".aboutMainAnime", { scaleY: 1, duration: 0.5, stagger:0.3},0.3)
 
     return () => {
       aboutMainAnime.kill();
@@ -28,7 +28,7 @@ export default function AboutMain() {
   useEffect(()=>{
     if(isHeaderClose){
       aboutMainAnime
-      .to(".aboutMainAnime", { scaleY: 0, duration: 0.5 },0.5)
+      .to(".aboutMainAnime", { scaleY: 0, duration: 0.5 },0.3)
     }
   },[isHeaderClose])
 

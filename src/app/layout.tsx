@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Stardust from "./components/parts/StardustBG/Stardust";
+import Stardust from "./(components)/parts/StardustBG/Stardust";
 import { HbgBtnContextProvider } from "./(context)/HbgContext";
 import { SideAnimeContextProvider } from "./(context)/SidebarAnimation";
 import { LandingAnimeContextProvider } from "./(context)/LandingAnimation";

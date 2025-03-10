@@ -34,7 +34,7 @@ export default function AboutWorkE() {
   useEffect(()=>{
     if(isHeaderClose){
       aboutWorkAnime
-      .to(".aboutWorkAnime", { scaleY: 0, duration: 0.5 },0.5)
+      .to(".aboutWorkAnime", { scaleY: 0, duration: 0.5 },0.3)
     }
     return () => {
       aboutWorkAnime.kill();

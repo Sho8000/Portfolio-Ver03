@@ -34,13 +34,12 @@ export default function AboutProject() {
     useEffect(()=>{
       if(isHeaderClose){
         aboutProAnime
-        .to(".aboutProAnime", { scaleY: 0, duration: 0.5 },0.5)
+        .to(".aboutProAnime", { scaleY: 0, duration: 0.5 },0.3)
       }
     },[isHeaderClose])
   
   const goToProjectPage = () => {
-//    window.location.href = `/project`
-//    add hover action
+    window.location.href = `/project`
   }
 
   return (
