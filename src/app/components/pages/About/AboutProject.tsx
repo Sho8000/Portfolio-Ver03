@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
-import { useTranslateContext } from "@/app/context/Translate";
+import { useHeaderAnimeContext } from "@/app/(context)/HeaderAnimation";
+import { useTranslateContext } from "@/app/(context)/Translate";
 import Style from "./About.module.css"
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 

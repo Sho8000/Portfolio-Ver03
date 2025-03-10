@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
+import { useHeaderAnimeContext } from "@/app/(context)/HeaderAnimation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 interface SectionDivProp {

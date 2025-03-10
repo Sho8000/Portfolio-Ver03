@@ -8,8 +8,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import { useHbgBtnContext } from "@/app/context/HbgContext";
-import { useSideAnimeContext } from "@/app/context/SidebarAnimation";
+import { useHbgBtnContext } from "@/app/(context)/HbgContext";
+import { useSideAnimeContext } from "@/app/(context)/SidebarAnimation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function Sidebar() {
@@ -65,9 +65,9 @@ export default function Sidebar() {
               <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"Work Experience", moveTo:"about/#work"}}/>
               </div>
-              <div className="itemAnimation scale-y-0">
+{/*               <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"Project", moveTo:"about/#project"}}/>
-              </div>
+              </div> */}
               <div className="itemAnimation scale-y-0">
                 <Btn btnType={{text:"Project Links", moveTo:"project"}}/>
               </div>

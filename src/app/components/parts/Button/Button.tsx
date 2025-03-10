@@ -1,13 +1,13 @@
 "use client"
 import Style from "./Button.module.css"
 import { CircleSVG } from "../svg/AllSvgs";
-import { useHbgBtnContext } from "@/app/context/HbgContext";
+import { useHbgBtnContext } from "@/app/(context)/HbgContext";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLandingAnimeContext } from "@/app/context/LandingAnimation";
-import { useHomeAnimeBtnContext } from "@/app/context/HomeAnime";
-import { useTranslateContext } from "@/app/context/Translate";
+import { useLandingAnimeContext } from "@/app/(context)/LandingAnimation";
+import { useHomeAnimeBtnContext } from "@/app/(context)/HomeAnime";
+import { useTranslateContext } from "@/app/(context)/Translate";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 interface BtnProps {

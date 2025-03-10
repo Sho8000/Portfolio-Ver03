@@ -1,6 +1,6 @@
 "use client"
 
-import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
+import { useHeaderAnimeContext } from "@/app/(context)/HeaderAnimation";
 import { HbgMenu } from "../../parts/svg/AllSvgs";
 import Style from "./Header.module.css"
 import { useEffect } from "react";

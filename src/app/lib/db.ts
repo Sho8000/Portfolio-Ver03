@@ -9,9 +9,14 @@ import PokemonImg from "@/../public/PokemonImgPC.png"
 import HoribaImg from "@/../public/Horiba.png"
 import NorsatImg from "@/../public/Norsat.png"
 import AKiFAiRWAY from "@/../public/AKiFAiRWAY.png"
+import LineClone from "@/../public/LineClone.png"
 import GSAP_Logo from "@/../public/GSAP_Logo_90_90.png"
 import JQuery_Logo from "@/../public/JQuery_Logo_90_90.png"
 import NextJS_Logo from "@/../public/NextJS_Logo_90_90.png"
+import Tailwind_Logo from "@/../public/Tailwind_Logo_90_90.png"
+import React_Logo from "@/../public/React_Logo_90_90.png"
+import Vercel_Logo from "@/../public/Vercel_Logo_90_90.png"
+
 
 export const MainDBEng = [
   {
@@ -19,16 +24,27 @@ export const MainDBEng = [
     myImg:myImg,
     mainComment:`I was working as an engineer in the Semiconductor industry for 13 years in Japan. And my expertise are suggesting other employees efficiency and removing unproductive processes. \n\nI started learning web development in 2024. I can use React, NextJS, NodeJS, Postgres SQL and mongoDB. So I can work as a full stack engineer.\n\nI keep continuing to learn programming, then I want to combine those skills to provide useful web applications and great websites for my clients.\n\nPlease contact me if you have any interest in me.`,
     project:[
-      {
+/*       {
         projectName:"SparkCard",
         imgUrl:SparkImg,
         type:"Personal Project",
         explain:"This is my first project I used NextJS. This was a good training to think about how to create reusable components. This is from a school project, so it doesn't have any button actions except to send email.",
         url:"https://",
         githubUrl:"",
-        skillImg:[NextJS_Logo,GSAP_Logo],
-        skillName:["NextJS","GSAP"],
+        skillImg:[NextJS_Logo,Tailwind_Logo,GSAP_Logo],
+        skillName:["NextJS","Tailwind","GSAP"],
         createdDate:"9th Febrary, 2025"
+      }, */
+      {
+        projectName:"Line Clone",
+        imgUrl:LineClone,
+        type:"Group Project",
+        explain:"This is a Group project, and I created the Hero section, all animation and responsive. This is from a school project. It was a good practise to manage the team tasks.",
+        url:"https://line-clone-cwtpqidq9-shos-projects-0ad6b8d5.vercel.app/",
+        githubUrl:"https://github.com/Sho8000/Line-Clone",
+        skillImg:[NextJS_Logo,React_Logo,Tailwind_Logo,GSAP_Logo,Vercel_Logo],
+        skillName:["NextJS","React","Tailwind","GSAP","Vercel"],
+        createdDate:"9th March, 2025"
       },
       {
         projectName:"AKiF AiRWAY",
@@ -111,7 +127,7 @@ export const MainDBJap = [
     myImg:myImg,
     mainComment:`私は、13年間日本の半導体業界でエンジニアとして勤務をしておりました。私の専門は工程改善で、工程の無駄や効率化を進めており、他の社員への指導も行っておりました。\n\n 英語やWeb Deveropemntについて勉強したく、2023年8月にカナダへと留学し、2024年4月からWeb Deveropemntの勉強を始め、現在ではReact、 NextJS、 NodeJS、 PostgresSQL そして、MongoDB を扱えるようになり、フルスタックエンジニアとして活躍できます。 \n\n 今後もプログラミングの勉強を続け、今まで身に着けた経験を組み合わせ、お客様にとって役に立つWebサイトやWebアプリの開発をしていきます。\n\n ご興味をお持ちでしたら、ぜひご相談ください。`,
     project:[
-      {
+/*       {
         projectName:"SparkCard",
         imgUrl:SparkImg,
         type:"Personal Project",
@@ -121,6 +137,17 @@ export const MainDBJap = [
         skillImg:[NextJS_Logo,GSAP_Logo],
         skillName:["NextJS","GSAP"],
         createdDate:"9th Febrary, 2025"
+      }, */
+      {
+        projectName:"Line Clone",
+        imgUrl:LineClone,
+        type:"Group Project",
+        explain:"グループプロジェクトとして、このページを作成しました。このプロジェクトでは、Heroセクション、全アニメーションとレスポンシブを担当しました。このプロジェクトは学校のプロジェクトですが、チームタスク管理を含めた実戦経験を積むことができました。",
+        url:"https://line-clone-cwtpqidq9-shos-projects-0ad6b8d5.vercel.app/",
+        githubUrl:"https://github.com/Sho8000/Line-Clone",
+        skillImg:[NextJS_Logo,React_Logo,Tailwind_Logo,GSAP_Logo,Vercel_Logo],
+        skillName:["NextJS","React","Tailwind","GSAP","Vercel"],
+        createdDate:"9th March, 2025"
       },
       {
         projectName:"AKiF AiRWAY",

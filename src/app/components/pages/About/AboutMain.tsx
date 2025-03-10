@@ -5,8 +5,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LanguageBtn } from "../../parts/Button/Button";
-import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
-import { useTranslateContext } from "@/app/context/Translate";
+import { useHeaderAnimeContext } from "@/app/(context)/HeaderAnimation";
+import { useTranslateContext } from "@/app/(context)/Translate";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function AboutMain() {

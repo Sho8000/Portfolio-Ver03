@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import Footer from "../Footer/Footer";
-import { useHomeAnimeBtnContext } from "@/app/context/HomeAnime";
+import { useHomeAnimeBtnContext } from "@/app/(context)/HomeAnime";
 import Style from "./Home.module.css"
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
@@ -51,9 +51,9 @@ export default function HomeMain() {
             <div className="homeAnimation scale-y-0">
               <MainPageBtn btnType={{text:"Work Experience", moveTo:"about/#work"}}/>
             </div>
-            <div className="homeAnimation scale-y-0">
+{/*             <div className="homeAnimation scale-y-0">
               <MainPageBtn btnType={{text:"Projects", moveTo:"about/#project"}}/>
-            </div>
+            </div> */}
             <div className="homeAnimation scale-y-0">
               <MainPageBtn btnType={{text:"Project Links", moveTo:"project"}}/>
             </div>

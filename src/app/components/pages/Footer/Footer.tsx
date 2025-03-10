@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
+import { useHeaderAnimeContext } from "@/app/(context)/HeaderAnimation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 /* Contact me without props */

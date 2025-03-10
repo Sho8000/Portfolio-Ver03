@@ -1,11 +1,11 @@
 "use client"
-import { useHeaderAnimeContext } from "@/app/context/HeaderAnimation";
+import { useHeaderAnimeContext } from "@/app/(context)/HeaderAnimation";
 import Image from "next/image";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useTranslateContext } from "@/app/context/Translate";
+import { useTranslateContext } from "@/app/(context)/Translate";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 import Style from "./About.module.css"
 

@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import { useHeaderAnimeContext } from "../context/HeaderAnimation";
+import { useHeaderAnimeContext } from "../(context)/HeaderAnimation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function Project() {

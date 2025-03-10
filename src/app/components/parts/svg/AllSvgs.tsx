@@ -1,5 +1,5 @@
 "use client"
-import { useHbgBtnContext } from "@/app/context/HbgContext";
+import { useHbgBtnContext } from "@/app/(context)/HbgContext";
 
 interface CircleProps {
   radius:number;

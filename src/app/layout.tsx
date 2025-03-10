@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Stardust from "./components/parts/StardustBG/Stardust";
-import { HbgBtnContextProvider } from "./context/HbgContext";
-import { SideAnimeContextProvider } from "./context/SidebarAnimation";
-import { LandingAnimeContextProvider } from "./context/LandingAnimation";
-import { HomeAnimeContextProvider } from "./context/HomeAnime";
-import { HeaderAnimeContextProvider } from "./context/HeaderAnimation";
-import { TranslateContextProvider } from "./context/Translate";
+import { HbgBtnContextProvider } from "./(context)/HbgContext";
+import { SideAnimeContextProvider } from "./(context)/SidebarAnimation";
+import { LandingAnimeContextProvider } from "./(context)/LandingAnimation";
+import { HomeAnimeContextProvider } from "./(context)/HomeAnime";
+import { HeaderAnimeContextProvider } from "./(context)/HeaderAnimation";
+import { TranslateContextProvider } from "./(context)/Translate";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

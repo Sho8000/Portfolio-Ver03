@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import { useLandingAnimeContext } from "@/app/context/LandingAnimation";
+import { useLandingAnimeContext } from "@/app/(context)/LandingAnimation";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 export default function LandingPage() {
