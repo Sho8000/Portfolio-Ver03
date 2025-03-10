@@ -26,7 +26,7 @@ export default function HomeMain() {
   useEffect(()=>{
     if(linkTo){
       homeAnimation
-        .to(".homeAnimation",{scaleY:0,duration:0.5,stagger:-0.5})
+        .to(".homeAnimation",{scaleY:0,duration:0.5,stagger:-0.3})
         .then(()=>{
           window.location.href = `/${linkTo}`;
         })
