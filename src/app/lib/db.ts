@@ -3,7 +3,7 @@ import GithubIcon from "@/../public/github.png"
 import InstagramIcon from "@/../public/instagramLogo.png"
 import LinkedInIcon from "@/../public/LinkedIn.png"
 import myImg from "@/../public/TeachingSqare.png"
-import SparkImg from "@/../public/SparkCard.png"
+/* import SparkImg from "@/../public/SparkCard.png" */
 import MovieImg from "@/../public/MovieSuggestingApp.png"
 import PokemonImg from "@/../public/PokemonImgPC.png"
 import HoribaImg from "@/../public/Horiba.png"
