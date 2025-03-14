@@ -43,7 +43,7 @@ export default function AboutProject() {
   }
 
   return (
-    <section id="project" className="w-[100%] min-h-[100vh] overflow-x-hidden">
+    <section id="project" className="w-[100%] min-h-[80vh] overflow-x-hidden">
       <div className="mb-4 bg-blue-900/60 border-t-2 border-l-2 border-r-2 border-gray-200/60 aboutProAnime scale-y-0">
         {aboutData.project.map((item,index)=>{
           return <div key={index}>

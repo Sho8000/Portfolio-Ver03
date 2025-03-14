@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface circleObject {
   x:number;
@@ -14,14 +14,35 @@ interface circleObject {
 const Stardust: React.FC = () => {
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0   });
+
+  useEffect(() => {
+    if(typeof window !== "undefined"){
+      //update canvas size every second
+      const interval = setInterval(() => {
+        const newWidth = window.innerWidth;
+        const newHeight = window.innerHeight;
+  
+        if (canvasSize.width !== newWidth || canvasSize.height !== newHeight) {
+          setCanvasSize({ width: newWidth, height: newHeight });
+        }
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }
+  }, [canvasSize]);
 
   useEffect(()=>{
     const canvas = canvasRef.current;
     let circles:circleObject[] = [];
-    const numCircles = 150;
+    const numCircles = 75;
     let animationFrameId: number;
     
     if(canvas){
+      const ctx = canvas.getContext("2d");
+      canvas.width = canvasSize.width;
+      canvas.height = canvasSize.height;
+
       const initialCircle = () => {
         circles = [];
         for (let i = 0; i < numCircles; i++) {
@@ -36,14 +57,7 @@ const Stardust: React.FC = () => {
         }
       }
 
-      const updateCanvasSize = () => {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-          initialCircle();
-      }
-
-      const ctx = canvas.getContext("2d");
-      updateCanvasSize();
+      initialCircle();
 
       if(ctx){
         const animate = () => {
@@ -77,16 +91,14 @@ const Stardust: React.FC = () => {
           animationFrameId = requestAnimationFrame(animate);
         }
 
-        window.addEventListener('resize', updateCanvasSize);
-        animate();
+        animate()
 
         return () => {
-          window.removeEventListener('resize', updateCanvasSize);
           cancelAnimationFrame(animationFrameId);
         };
       }
     }
-  },[])
+  },[canvasSize])
   
   return <canvas ref={canvasRef} className='w-[100vw] h-[100vh] fixed top-0 left-0 -z-10 '/>;
 };
