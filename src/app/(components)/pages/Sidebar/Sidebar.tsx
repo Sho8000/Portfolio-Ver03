@@ -1,6 +1,6 @@
 "use client"
 import { Btn } from "../../parts/Button/Button";
-import Stardust from "../../parts/StardustBG/Stardust";
+//import Stardust from "../../parts/StardustBG/Stardust";
 import { CloseBtn } from "../../parts/svg/AllSvgs";
 import Style from "./Sidebar.module.css"
 
