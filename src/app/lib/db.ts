@@ -16,6 +16,7 @@ import NextJS_Logo from "@/../public/NextJS_Logo_90_90.png"
 import Tailwind_Logo from "@/../public/Tailwind_Logo_90_90.png"
 import React_Logo from "@/../public/React_Logo_90_90.png"
 import Vercel_Logo from "@/../public/Vercel_Logo_90_90.png"
+import Netlify_Logo from "@/../public/Netlify_90_90.png"
 
 
 export const MainDBEng = [
@@ -53,8 +54,8 @@ export const MainDBEng = [
         explain:"This is my first client's website. I created this website based on my designer's Mockup. I used OOP for it and GSAP for the animation. My client was very satisfied with my work.",
         url:"https://akifairway-englishsite.netlify.app/",
         githubUrl:"https://github.com/Sho8000/Client-s-Detox-English-Conversation-EnglishVersion",
-        skillImg:[GSAP_Logo,JQuery_Logo],
-        skillName:["GSAP","JQuery"],
+        skillImg:[GSAP_Logo,JQuery_Logo,Netlify_Logo],
+        skillName:["GSAP","JQuery","Netlify"],
         createdDate:"9th September, 2024"
       },
       {
@@ -156,8 +157,8 @@ export const MainDBJap = [
         explain:"私の初めての顧客のWebsiteです。私の友人にデザインをお願いし、そのデザインを元にWebPageの作成を行いました。こちらのWebsiteは、ReactやNextJSではなく、OOPを使用して作成しています。アニメーションにはGSAPを使用しました。本Websiteの仕上がりに、お客様も大変喜んでおられました。",
         url:"https://akifairway-englishsite.netlify.app/",
         githubUrl:"https://github.com/Sho8000/Client-s-Detox-English-Conversation-EnglishVersion",
-        skillImg:[GSAP_Logo,JQuery_Logo],
-        skillName:["GSAP","JQuery"],
+        skillImg:[GSAP_Logo,JQuery_Logo,Netlify_Logo],
+        skillName:["GSAP","JQuery","Netlify"],
         createdDate:"9th September, 2024"
       },
       {
