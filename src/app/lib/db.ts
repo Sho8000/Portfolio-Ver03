@@ -17,6 +17,8 @@ import Tailwind_Logo from "@/../public/Tailwind_Logo_90_90.png"
 import React_Logo from "@/../public/React_Logo_90_90.png"
 import Vercel_Logo from "@/../public/Vercel_Logo_90_90.png"
 import Netlify_Logo from "@/../public/Netlify_90_90.png"
+import NodeJS_Logo from "@/../public/NodeJS_Logo_90_90.png"
+//import Expless_Logo from "@/../public/Expless_Logo_90_90.png"
 
 
 export const MainDBEng = [
@@ -65,8 +67,8 @@ export const MainDBEng = [
         explain:"This is my first school project using typescript. This app can search information for movies from the API. Let's check your favorite movies!",
         url:"https://sho8000.github.io/movie-suggestion-app/",
         githubUrl:"https://github.com/Sho8000/movie-suggestion-app",
-        skillImg:[GSAP_Logo,JQuery_Logo],
-        skillName:["GSAP","JQuery"],
+        skillImg:[NodeJS_Logo,GSAP_Logo,JQuery_Logo],
+        skillName:["Node.js","GSAP","JQuery"],
         createdDate:"25th October, 2024"
       },
       {
@@ -168,8 +170,8 @@ export const MainDBJap = [
         explain:"タイプスクリプトを使った初めてのプロジェクトです。このアプリは、映画情報のAPIを使用しているため、映画情報を検索することができます。あなたのお気に入りの映画のタイトルを確認してみましょう！！",
         url:"https://sho8000.github.io/movie-suggestion-app/",
         githubUrl:"https://github.com/Sho8000/movie-suggestion-app",
-        skillImg:[GSAP_Logo,JQuery_Logo],
-        skillName:["GSAP","JQuery"],
+        skillImg:[NodeJS_Logo,GSAP_Logo,JQuery_Logo],
+        skillName:["Node.js","GSAP","JQuery"],
         createdDate:"25th October, 2024"
       },
       {
