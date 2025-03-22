@@ -36,7 +36,7 @@ export const MainDBEng = [
         githubUrl:"",
         skillImg:[NextJS_Logo,Tailwind_Logo,GSAP_Logo],
         skillName:["NextJS","Tailwind","GSAP"],
-        createdDate:"9th Febrary, 2025"
+        createdDate:"9th Febrary, 2025" 
       }, */
       {
         projectName:"Line Clone",
