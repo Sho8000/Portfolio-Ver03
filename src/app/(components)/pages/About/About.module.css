@@ -4,7 +4,10 @@
   }
   .imgContainer{
     border-right: none;
-    border-bottom: 2px dotted rgba(177, 177, 177, 0.6);
+  }
+  .textContainer{
+    border-left: none;
+    border-top: 2px dotted rgba(177, 177, 177, 0.6);
   }
   .workContainer{
     flex-direction: column;

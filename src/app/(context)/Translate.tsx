@@ -9,7 +9,7 @@ interface Project {
   type: string;
   explain: string;
   url: string;
-  githubUrl: string;
+  githubUrl?: string;
   skillImg: StaticImageData[];
   skillName: string[];
   createdDate: string;

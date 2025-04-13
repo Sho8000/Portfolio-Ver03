@@ -48,7 +48,7 @@ export default function AboutProject() {
         {aboutData.project.map((item,index)=>{
           return <div key={index}>
             <div className={`flex items-strech border-b-2 border-gray-200/60 ${Style.projectContainer}`}>
-              <div className={`basis-1/2 border-r-2 border-gray-200/60 ${Style.imgContainer}`}>
+              <div className={`place-self-center basis-1/2 ${Style.imgContainer}`}>
                 <div className="hover:scale-105 cursor-pointer" onClick={goToProjectPage}>
                   <Image
                     className="m-auto p-4"
@@ -59,8 +59,8 @@ export default function AboutProject() {
                   />
                 </div>
               </div>
-              <div className="h-auto basis-1/2">
-                <div className="flex justify-center">
+              <div className={`h-auto basis-1/2 border-l-2 border-gray-200/60 ${Style.textContainer}`}>
+                <div className="flex justify-center flex-wrap">
                 {item.skillImg.map((skill,index)=>
                   <div key={index}>
                     <Image
@@ -75,7 +75,12 @@ export default function AboutProject() {
                 </div>
                 <p className="w-[80%] m-auto text-white">{item.explain}</p>
                 <div className="w-[80%] m-auto flex justify-between items-center flex-wrap mt-3 mb-3">
-                  <p className="text-white text-center"><a href={item.githubUrl}><span className="font-bold underline">GitHub</span></a></p>
+                  {item.githubUrl ? (
+                    <p className="text-white text-center"><a href={item.githubUrl}><span className="font-bold underline">GitHub</span></a></p>) 
+                    :
+                    //To align "date : " location
+                    (<div></div>)
+                  }
                   <p className="text-white">date : {item.createdDate}</p>
                 </div>
               </div>

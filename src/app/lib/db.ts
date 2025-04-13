@@ -18,6 +18,14 @@ import React_Logo from "@/../public/React_Logo_90_90.png"
 import Vercel_Logo from "@/../public/Vercel_Logo_90_90.png"
 import Netlify_Logo from "@/../public/Netlify_90_90.png"
 import NodeJS_Logo from "@/../public/NodeJS_Logo_90_90.png"
+import CreateNextApp from "@/../public/CreateNextApp.png"
+import HUH from "@/../public/HUH.png"
+import Zustand_Logo from "@/../public/Zustand_Logo_90_90.png"
+import Redux_Logo from "@/../public/Redux_Logo_90_90.png"
+import CMS_Logo from "@/../public/CMS_Logo_90_90.png"
+import NextAuth_Logo from "@/../public/NextAuth_Logo_90_90.png"
+import MongoDB_Logo from "@/../public/MongoDB_Logo_90_90.png"
+import FramerMotion_Logo from "@/../public/FramerMotion_Logo_90_90.png"
 //import Expless_Logo from "@/../public/Expless_Logo_90_90.png"
 
 
@@ -27,17 +35,27 @@ export const MainDBEng = [
     myImg:myImg,
     mainComment:`I was working as an engineer in the Semiconductor industry for 13 years in Japan. And my expertise are suggesting other employees efficiency and removing unproductive processes. \n\nI started learning web development in 2024. I can use React, NextJS, NodeJS, Postgres SQL and mongoDB. So I can work as a full stack engineer.\n\nI keep continuing to learn programming, then I want to combine those skills to provide useful web applications and great websites for my clients.\n\nPlease contact me if you have any interest in me.`,
     project:[
-/*       {
-        projectName:"SparkCard",
-        imgUrl:SparkImg,
+      {
+        projectName:"Create Next App",
+        imgUrl:CreateNextApp,
         type:"Personal Project",
-        explain:"This is my first project I used NextJS. This was a good training to think about how to create reusable components. This is from a school project, so it doesn't have any button actions except to send email.",
-        url:"https://",
-        githubUrl:"",
-        skillImg:[NextJS_Logo,Tailwind_Logo,GSAP_Logo],
-        skillName:["NextJS","Tailwind","GSAP"],
-        createdDate:"9th Febrary, 2025" 
-      }, */
+        explain:"I developed this project to demonstrate my skills to potential clients. It showcases my ability to build web applications that utilize back-end technologies such as Shopify, or serve specific purposes like a restaurant website. This application was built using Next.js. During deployment, I encountered several challenges, including TypeScript errors and issues connecting to the database. Working through these problems taught me how to effectively troubleshoot and resolve such issues, which I consider the most valuable outcome of this project.",
+        url:"https://sample-restaurant-tau.vercel.app/",
+        githubUrl:"https://github.com/Sho8000/SampleRestaurant",
+        skillImg:[NextJS_Logo,Tailwind_Logo,FramerMotion_Logo,MongoDB_Logo,CMS_Logo,Zustand_Logo,NextAuth_Logo,Vercel_Logo],
+        skillName:["NextJS","Tailwind","FramerM","MongoDB","CMS","Zustand","NextAuth","Vercel"],
+        createdDate:"13th April, 2025" 
+      },
+      {
+        projectName:"How universe howls",
+        imgUrl:HUH,
+        type:"Client's Project",
+        explain:"My supervisor provided me with a valuable opportunity to develop a React project. As part of the project, I designed and implemented the initial landing animation, footer, dynamic navigation bar, and production pages (/desiretofly and /notforyou). One of the more challenging aspects was building the dynamic navigation bar, but I successfully accomplished it by utilizing Redux in combination with the IntersectionObserver API.",
+        url:"https://pern-alpha.vercel.app/",
+        skillImg:[React_Logo,Tailwind_Logo,Redux_Logo],
+        skillName:["NextJS","Tailwind","Redux"],
+        createdDate:"18th March, 2025" 
+      },
       {
         projectName:"Line Clone",
         imgUrl:LineClone,
