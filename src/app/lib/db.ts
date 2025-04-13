@@ -39,7 +39,7 @@ export const MainDBEng = [
         projectName:"Create Next App",
         imgUrl:CreateNextApp,
         type:"Personal Project",
-        explain:"I developed this project to demonstrate my skills to potential clients. It showcases my ability to build web applications that utilize back-end technologies such as Shopify, or serve specific purposes like a restaurant website. This application was built using Next.js. During deployment, I encountered several challenges, including TypeScript errors and issues connecting to the database. Working through these problems taught me how to effectively troubleshoot and resolve such issues, which I consider the most valuable outcome of this project.",
+        explain:"I developed this project to show my skills to potential clients. And this would become a model case of full stack web applications for Shopify and restaurant website. This application was built using Next.js. During deployment, I faced several challenges, including TypeScript errors and issues connecting to the database. Working through these problems, I learned how to troubleshoot and resolve such issues. This is one of the biggest outcome for me.",
         url:"https://sample-restaurant-tau.vercel.app/",
         githubUrl:"https://github.com/Sho8000/SampleRestaurant",
         skillImg:[NextJS_Logo,Tailwind_Logo,FramerMotion_Logo,MongoDB_Logo,CMS_Logo,Zustand_Logo,NextAuth_Logo,Vercel_Logo],
@@ -50,10 +50,10 @@ export const MainDBEng = [
         projectName:"How universe howls",
         imgUrl:HUH,
         type:"Client's Project",
-        explain:"My supervisor provided me with a valuable opportunity to develop a React project. As part of the project, I designed and implemented the initial landing animation, footer, dynamic navigation bar, and production pages (/desiretofly and /notforyou). One of the more challenging aspects was building the dynamic navigation bar, but I successfully accomplished it by utilizing Redux in combination with the IntersectionObserver API.",
+        explain:"My supervisor provided me with a valuable opportunity to develop a React project. As part of the project, I designed and implemented the initial landing animation, footer, dynamic navigation bar, and production pages (/desiretofly and /notforyou). One of the more challenging parts was building the dynamic navigation bar, but I successfully built it by using Redux in and the IntersectionObserver API.",
         url:"https://pern-alpha.vercel.app/",
         skillImg:[React_Logo,Tailwind_Logo,Redux_Logo],
-        skillName:["NextJS","Tailwind","Redux"],
+        skillName:["React","Tailwind","Redux"],
         createdDate:"18th March, 2025" 
       },
       {
@@ -148,17 +148,27 @@ export const MainDBJap = [
     myImg:myImg,
     mainComment:`私は、13年間日本の半導体業界でエンジニアとして勤務をしておりました。私の専門は工程改善で、工程の無駄や効率化を進めており、他の社員への指導も行っておりました。\n\n 英語やWeb Deveropemntについて勉強したく、2023年8月にカナダへと留学し、2024年4月からWeb Deveropemntの勉強を始め、現在ではReact、 NextJS、 NodeJS、 PostgresSQL そして、MongoDB を扱えるようになり、フルスタックエンジニアとして活躍できます。 \n\n 今後もプログラミングの勉強を続け、今まで身に着けた経験を組み合わせ、お客様にとって役に立つWebサイトやWebアプリの開発をしていきます。\n\n ご興味をお持ちでしたら、ぜひご相談ください。`,
     project:[
-/*       {
-        projectName:"SparkCard",
-        imgUrl:SparkImg,
+      {
+        projectName:"Create Next App",
+        imgUrl:CreateNextApp,
         type:"Personal Project",
-        explain:" NextJSを使用した私の最初のプロジェクトです。 これはスクールプロジェクトですが、本プロジェクトを通して、学校で学んだReuseableコンポーネントの練習をしました。こちらのプロジェクトは練習用のWebページとなり、Email送信ボタンを除き、すべてのボタンに機能はついていません。",
-        url:"https://",
-        githubUrl:"",
-        skillImg:[NextJS_Logo,GSAP_Logo],
-        skillName:["NextJS","GSAP"],
-        createdDate:"9th Febrary, 2025"
-      }, */
+        explain:"このプロジェクトは、自分のスキルをクライアントに示すことを目的として開発しました。Shopifyやレストランのウェブサイトのような特定の用途に対応したモデルケースとなります。このアプリケーションはNext.jsを用いて構築されています。Deployの過程では、TypeScriptのエラーやデータベース接続の問題など、いくつかの課題に直面しましたが、このトラブルを通じて、トラブルシューティングや問題解決のスキルを実践的に身につけることができました。",
+        url:"https://sample-restaurant-tau.vercel.app/",
+        githubUrl:"https://github.com/Sho8000/SampleRestaurant",
+        skillImg:[NextJS_Logo,Tailwind_Logo,FramerMotion_Logo,MongoDB_Logo,CMS_Logo,Zustand_Logo,NextAuth_Logo,Vercel_Logo],
+        skillName:["NextJS","Tailwind","FramerM","MongoDB","CMS","Zustand","NextAuth","Vercel"],
+        createdDate:"13th April, 2025" 
+      },
+      {
+        projectName:"How universe howls",
+        imgUrl:HUH,
+        type:"Client's Project",
+        explain:"師匠から貴重な機会をいただき、Reactプロジェクトの開発を担当しました。プロジェクトでは、ランディングページのアニメーション、フッター、動的ナビゲーションバー、そして /desiretofly および /notforyou のプロダクションページの設計と実装を行いました。中でも特に難しかったのは動的ナビゲーションバーの構築でしたが、ReduxとIntersectionObserver APIを活用することで、無事に実装することができました。",
+        url:"https://pern-alpha.vercel.app/",
+        skillImg:[React_Logo,Tailwind_Logo,Redux_Logo],
+        skillName:["React","Tailwind","Redux"],
+        createdDate:"18th March, 2025" 
+      },
       {
         projectName:"Line Clone",
         imgUrl:LineClone,
